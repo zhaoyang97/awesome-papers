@@ -1,17 +1,13 @@
 # Awesome AI Papers
 
 > A **bilingual (Chinese + English)** deep-reading project that writes "biographies" for the 100 papers that truly changed AI history.
->
-> Distill-style depth × Wikipedia-style coverage × native-Chinese writing + native-English mirror × LLM-driven and scalable.
 
 **English** | [中文](README_zh.md)
 
 **Sites**:
 
-- 🇬🇧 English site: <https://awesome.papernotes.org/en/>
-- 🇨🇳 Chinese site: <https://awesome.papernotes.org/>
-
-**Progress**: **134** deep notes so far, covering 5 eras (1958 → 2025).
+- English site: <https://awesome.papernotes.org/en/>
+- Chinese site: <https://awesome.papernotes.org/>
 
 | Era | Time range | Representative works | Notes |
 |------|----------|----------|--------|
@@ -23,26 +19,7 @@
 
 ---
 
-## The 8-section deep template
-
-Every deep note must contain:
-
-1. **Historical Context** — Why did this paper appear at that exact moment? What was the field stuck on?
-2. **Background and Motivation**
-3. **Method in Detail** — original equations + a modern reproduction in code + detailed comparison tables
-4. **Failed Baselines** — Which baselines lost at the time, and why? (Almost every other write-up skips this.)
-5. **Key Experimental Numbers**
-6. **Idea Lineage** — must include a Mermaid citation graph (predecessors → this paper → successors → misreadings)
-7. **Modern Perspective** — N years later, which assumptions no longer hold up?
-8. **Limitations / Related Work / Resources**
-
-> ⚠️ **No scoring of top-tier papers.** Being included in the Top 100 is itself the highest praise — the frontmatter intentionally has no `awesome_score` field.
-
----
-
 ## All notes (grouped by era)
-
-> Click any title on GitHub to read the corresponding English markdown. For the web version (TOC, Mermaid rendering, dark mode), visit <https://awesome.papernotes.org/en/>.
 
 ### 1 · Foundations (1957-2011)
 
