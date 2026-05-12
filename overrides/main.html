@@ -1,0 +1,270 @@
+{% extends "base.html" %}
+
+{# ── Title: avoid duplicating site name on the homepage ── #}
+{% block htmltitle %}
+{% if page and page.is_homepage %}
+  <title>{{ config.site_name }}</title>
+{% else %}
+  {{ super() }}
+{% endif %}
+{% endblock %}
+
+{# Make the site name in the header clickable (link to home).
+   Material's default only links the logo icon; this wraps the title text in an anchor too.
+   Also injects SEO: hreflang / OpenGraph / Twitter Card / JSON-LD (WebSite,
+   CollectionPage, ScholarlyArticle) + BreadcrumbList — mirrors paper_notes. #}
+{% block extrahead %}
+  {{ super() }}
+  <style>
+    .md-header__title a.site-name-link {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .md-header__title a.site-name-link:hover .md-ellipsis {
+      text-decoration: underline;
+    }
+
+    /* --------------------------------------------------------------
+       Mermaid diagrams: give them more horizontal room and let them
+       scroll if the rendered SVG is wider than the article column.
+       Material renders the SVG inside a closed shadow root, so we can
+       only style the host container — not the SVG itself. Expanding
+       the container width is what lets larger diagrams (lineage etc.)
+       render with readable labels.
+       -------------------------------------------------------------- */
+    .md-typeset .mermaid {
+      text-align: center;
+      overflow-x: auto;
+      overflow-y: hidden;
+      margin: 1.5em 0;
+      /* Break out of the narrow article column up to ~120px on each
+         side (clamped on small viewports by the media query below). */
+      margin-left: -60px;
+      margin-right: -60px;
+    }
+    @media screen and (max-width: 960px) {
+      .md-typeset .mermaid {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  </style>
+  <script>
+    (function () {
+      function wrapSiteName() {
+        var topic = document.querySelector(
+          '.md-header__title .md-header__topic:first-child'
+        );
+        if (!topic) return;
+        if (topic.querySelector('a.site-name-link')) return;
+        var ellipsis = topic.querySelector('.md-ellipsis');
+        if (!ellipsis) return;
+        var logo = document.querySelector('.md-header__button.md-logo');
+        var href = logo ? logo.getAttribute('href') : '.';
+        var title = ellipsis.textContent.trim();
+        var a = document.createElement('a');
+        a.href = href;
+        a.className = 'site-name-link';
+        a.title = title;
+        ellipsis.parentNode.insertBefore(a, ellipsis);
+        a.appendChild(ellipsis);
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', wrapSiteName);
+      } else {
+        wrapSiteName();
+      }
+    })();
+  </script>
+
+  {# ── Detect page type (skip everything below on Material's 404 page ──
+     when ``page`` is None / Undefined) ───────────────────────────────────
+     awesome-papers structure:
+       - index.md            → WebSite (homepage)
+       - era*/index.md       → CollectionPage (era index)
+       - era*/YYYY_*.md      → ScholarlyArticle (paper page)
+  #}
+  {% if page %}
+  {% set _src = (page.file.src_uri if page.file else '') %}
+  {% set _is_index = _src.endswith('index.md') %}
+  {% set _is_paper = not page.is_homepage and not _is_index %}
+
+  {# Prefer frontmatter `title:` over nav entry / H1 (page.title). #}
+  {% set _seo_title_raw = (page.meta.title if page.meta and page.meta.title else (page.title | default(config.site_name))) %}
+  {% set _seo_title = _seo_title_raw | e %}
+
+  {# Description: frontmatter first, then site_description fallback. #}
+  {% set _desc_raw = (page.meta.description if page.meta and page.meta.description else (config.site_description | default(''))) %}
+  {% set _desc = _desc_raw | e %}
+
+  {# ── hreflang: bilingual alternate URLs (zh ↔ en) ───────────────
+     Both sites share host https://awesome.papernotes.org. Pages declare
+     each other via frontmatter `en_version:` / `zh_version:` (paths that
+     start with `/`). Emit only when partner version is declared so we
+     never produce 404 alternate clusters that Google penalises.
+  #}
+  {% set _host = 'https://awesome.papernotes.org' %}
+  {% set _en_alt = page.meta.en_version if page.meta and page.meta.en_version else None %}
+  {% set _zh_alt = page.meta.zh_version if page.meta and page.meta.zh_version else None %}
+  {% if _en_alt and config.theme.language == 'zh' %}
+  <link rel="alternate" hreflang="zh-CN" href="{{ page.canonical_url }}" />
+  <link rel="alternate" hreflang="en" href="{{ _host }}{{ _en_alt }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ _host }}{{ _en_alt }}" />
+  {% elif _zh_alt and config.theme.language == 'en' %}
+  <link rel="alternate" hreflang="zh-CN" href="{{ _host }}{{ _zh_alt }}" />
+  <link rel="alternate" hreflang="en" href="{{ page.canonical_url }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ page.canonical_url }}" />
+  {% elif not _is_paper %}
+  {# Homepage + era indexes mirror 1:1 between zh and en; emit hreflang
+     even when frontmatter doesn't declare a partner. For paper pages we
+     never fall back here, to avoid 404 alternates when one language is
+     still missing. #}
+  {% if config.theme.language == 'zh' %}
+  <link rel="alternate" hreflang="zh-CN" href="{{ page.canonical_url }}" />
+  <link rel="alternate" hreflang="en" href="{{ _host }}/en/{{ page.url }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ _host }}/en/{{ page.url }}" />
+  {% else %}
+  <link rel="alternate" hreflang="zh-CN" href="{{ _host }}/{{ page.url }}" />
+  <link rel="alternate" hreflang="en" href="{{ page.canonical_url }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ page.canonical_url }}" />
+  {% endif %}
+  {% endif %}
+
+  {# ── OpenGraph & Twitter Card ────────────────────────────────── #}
+  <meta property="og:site_name" content="{{ config.site_name }}" />
+  <meta property="og:type" content="{% if _is_paper %}article{% else %}website{% endif %}" />
+  <meta property="og:url" content="{{ page.canonical_url }}" />
+  <meta property="og:title" content="{{ _seo_title }}" />
+  <meta property="og:description" content="{{ _desc }}" />
+  <meta property="og:locale" content="{% if config.theme.language == 'zh' %}zh_CN{% else %}en_US{% endif %}" />
+  {% if config.theme.language == 'zh' and (_en_alt or not _is_paper) %}
+  <meta property="og:locale:alternate" content="en_US" />
+  {% elif config.theme.language == 'en' and (_zh_alt or not _is_paper) %}
+  <meta property="og:locale:alternate" content="zh_CN" />
+  {% endif %}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ _seo_title }}" />
+  <meta name="twitter:description" content="{{ _desc }}" />
+
+  {# ── JSON-LD ──────────────────────────────────────────────────────
+     All string values use ``| tojson`` (NOT ``| e``) to avoid GSC
+     "Bad escape sequence in string" errors when titles/descriptions
+     contain LaTeX backslashes (\theta, \boldsymbol, ...).
+  #}
+  {% if page.is_homepage %}
+  <!-- JSON-LD: WebSite (homepage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ config.site_name | tojson }},
+    "url": {{ page.canonical_url | tojson }},
+    "description": {{ _desc_raw | tojson }},
+    "inLanguage": {{ ('zh-CN' if config.theme.language == 'zh' else 'en') | tojson }},
+    "author": {
+      "@type": "Person",
+      "name": "ZhaoYang",
+      "url": "https://github.com/zhaoyang97"
+    }
+  }
+  </script>
+  {% elif _is_index %}
+  <!-- JSON-LD: CollectionPage (era index) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": {{ _seo_title_raw | tojson }},
+    "description": {{ _desc_raw | tojson }},
+    "url": {{ page.canonical_url | tojson }},
+    "inLanguage": {{ ('zh-CN' if config.theme.language == 'zh' else 'en') | tojson }},
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": {{ config.site_name | tojson }},
+      "url": {{ config.site_url | tojson }}
+    }
+  }
+  </script>
+  {% else %}
+  <!-- JSON-LD: ScholarlyArticle (paper page) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": {{ _seo_title_raw | tojson }},
+    "headline": {{ _seo_title_raw | tojson }},
+    "description": {{ _desc_raw | tojson }},
+    "url": {{ page.canonical_url | tojson }},
+    "inLanguage": {{ ('zh-CN' if config.theme.language == 'zh' else 'en') | tojson }},
+    "datePublished": {{ (page.meta.date | default(config.extra.build_date | default(''))) | string | tojson }},
+    "dateModified": {{ (page.meta.date | default(config.extra.build_date | default(''))) | string | tojson }},
+    {% if page.meta and page.meta.keywords %}
+    "keywords": {{ (page.meta.keywords | join(', ')) | tojson }},
+    {% endif %}
+    {% if page.meta and page.meta.authors %}
+    "author": [
+      {%- for a in page.meta.authors %}
+      { "@type": "Person", "name": {{ a | tojson }} }{% if not loop.last %},{% endif %}
+      {%- endfor %}
+    ],
+    {% else %}
+    "author": {
+      "@type": "Person",
+      "name": "ZhaoYang",
+      "url": "https://github.com/zhaoyang97"
+    },
+    {% endif %}
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ config.site_name | tojson }}
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": {{ config.site_name | tojson }},
+      "url": {{ config.site_url | tojson }}
+    }
+  }
+  </script>
+  {% endif %}
+
+  {# ── JSON-LD: BreadcrumbList ───────────────────────────────────
+     Build crumbs from page.ancestors. Every ListItem MUST have an
+     "item" URL (Google requirement). Skip on homepage.
+  #}
+  {% if not page.is_homepage %}
+  {% set _site = config.site_url.rstrip('/') %}
+  {% set _canon = page.canonical_url.rstrip('/') ~ '/' %}
+  {% set _rel = _canon[(_site|length + 1):].rstrip('/') %}
+  {% set _segs = _rel.split('/') if _rel else [] %}
+  {% set _ancestors = page.ancestors | reverse | list %}
+  {% set ns = namespace(items=[{'name': config.site_name, 'url': _site ~ '/'}]) %}
+  {% for anc in _ancestors %}
+    {% set _depth = loop.index %}
+    {% if _depth <= _segs|length %}
+      {% set _url = _site ~ '/' ~ (_segs[:_depth] | join('/')) ~ '/' %}
+      {% if _url != _canon %}
+        {% set ns.items = ns.items + [{'name': anc.title, 'url': _url}] %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  {% set ns.items = ns.items + [{'name': page.title, 'url': _canon}] %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+    {%- for c in ns.items %}
+      {
+        "@type": "ListItem",
+        "position": {{ loop.index }},
+        "name": {{ c.name | tojson }},
+        "item": {{ c.url | tojson }}
+      }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+    ]
+  }
+  </script>
+  {% endif %}
+  {% endif %}{# closes outer `{% if page %}` #}
+{% endblock %}

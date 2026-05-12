@@ -1,0 +1,23 @@
+flowchart LR
+    GPT3["GPT-3 / Few-shot LM (2020)"]
+    WebGPT["WebGPT / Browser-assisted QA (2021)"]
+    PAL["PAL / Program-aided LM (2022)"]
+    ReAct["ReAct / Reason + Act (2022)"]
+    TALM["TALM / Tool-augmented LM (2022)"]
+    Toolformer["Toolformer / Self-supervised API calls (2023)"]
+    Gorilla["Gorilla / API retrieval + calls (2023)"]
+    ToolLLM["ToolLLM / ToolBench (2023)"]
+    FunctionCalling["Function calling APIs (2023)"]
+    Agents["Agentic tool use in LLM apps (2024-2026)"]
+
+    GPT3 --> Toolformer
+    WebGPT --> Toolformer
+    PAL --> Toolformer
+    ReAct --> Toolformer
+    TALM --> Toolformer
+    Toolformer --> Gorilla
+    Toolformer --> ToolLLM
+    Toolformer --> FunctionCalling
+    FunctionCalling --> Agents
+    Gorilla --> Agents
+    ToolLLM --> Agents

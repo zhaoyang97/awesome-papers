@@ -1,0 +1,14 @@
+graph LR
+    A[Classical SSMs<br/>1960s-1980s] --> B[HiPPO 2020<br/>online compression]
+    B --> C[S4 2022<br/>structured SSM]
+    C --> D[S4D / S5 / H3<br/>2022-2023]
+    D --> E[Mamba 2023<br/>selective SSM]
+    F[Linear Attention 2020<br/>Transformers are RNNs] --> G[Structured Masked Attention]
+    H[FlashAttention 2022-2023<br/>hardware-aware attention] --> I[SSD Algorithm<br/>block decomposition]
+    E --> J[Mamba-2 2024<br/>Structured State Space Duality]
+    G --> J
+    I --> J
+    J --> K[Hybrid Mamba-Attention<br/>Jamba, Zamba, Falcon-H1]
+    J --> L[Mamba-3 2026<br/>state space principles]
+    E -. common misconception .-> M[Not a Transformer killer<br/>finite-state retrieval remains hard]
+    J -. corrected view .-> N[SSM and attention share algebra<br/>choose by memory and hardware]

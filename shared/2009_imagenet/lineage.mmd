@@ -1,0 +1,28 @@
+graph LR
+    MNIST["MNIST (1994)<br/>First benchmark CNN"]
+    CIFAR["CIFAR-10/100 (1998)<br/>Natural image dataset"]
+    Caltech101["Caltech-101 (2004)<br/>Object recognition pioneer"]
+    PASCAL["PASCAL VOC (2005)<br/>Detection & segmentation"]
+    
+    MNIST -.inspires CNN research.-> ImageNet
+    CIFAR -.small scale limit.-> ImageNet
+    Caltech101 -.sister project by Li.-> ImageNet
+    PASCAL -.crowdsourcing idea.-> ImageNet
+    
+    ImageNet["ImageNet (2009)<br/>Million-scale hierarchical<br/>dataset revolution"]
+    
+    ImageNet --> AlexNet["AlexNet (2012)<br/>Deep CNN triumph<br/>ILSVRC champion"]
+    ImageNet --> VGG["VGGNet (2014)<br/>Depth matters"]
+    ImageNet --> ResNet["ResNet (2015)<br/>Skip connections<br/>breakthrough"]
+    ImageNet --> Inception["Inception (2014)<br/>Multi-scale design"]
+    
+    AlexNet -.verifies scale hypothesis.-> Modern["Modern Vision Era<br/>2015-present"]
+    VGG -.pushes depth.-> Modern
+    ResNet -.enables very deep.-> Modern
+    
+    ImageNet -.dataset methodology.-> COCO["COCO (2014)<br/>Multi-task annotations"]
+    ImageNet -.scale philosophy.-> OpenImages["Open Images (2016)<br/>Web-scale diverse"]
+    ImageNet -.pretraining paradigm.-> CLIP["CLIP (2021)<br/>Vision-language foundation"]
+    
+    CLIP -.demonstrates scale transferability.-> Modern
+    Modern -.contemporary.-> BigVision["Foundation Models Era<br/>2022-present"]

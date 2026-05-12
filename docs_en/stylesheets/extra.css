@@ -1,0 +1,13 @@
+/* Hide the Material `(i)` indicator icon in the left nav (description tooltip). */
+.md-nav__link .md-nav__icon {
+  display: none !important;
+}
+
+/* Hide Material's per-page status badge in the left nav.
+   Material renders <span class="md-status md-status--v1"></span> next to
+   nav items whose frontmatter has `status:`. We use `status:` only as an
+   internal authoring marker (v1 / demo_v1 / ...) and do not want it shown. */
+.md-nav__link .md-status,
+.md-nav__item .md-status {
+  display: none !important;
+}

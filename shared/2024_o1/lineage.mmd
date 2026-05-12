@@ -1,0 +1,12 @@
+flowchart LR
+    A["CoT Prompting (2022)"] --> B["RLHF and InstructGPT (2022)"]
+    B --> C["GPT-4 closed frontier report (2023)"]
+    C --> D["o1 reasoning RL and hidden CoT (2024)"]
+    D --> E["Deliberative alignment and system-card governance (2024)"]
+    D --> F["Open reasoning reproductions: QwQ / R1 (2024-2025)"]
+    F --> G["Reasoning distillation and test-time scaling (2025-2026)"]
+    E --> H["CoT monitoring, instruction hierarchy, preparedness evals"]
+
+    I["Misread: o1 is just prompt engineering"] -.-> D
+    J["Misread: hidden CoT is guaranteed faithful"] -.-> H
+    K["Misread: samples imply a full recipe"] -.-> C

@@ -1,0 +1,16 @@
+graph LR
+  HubelWiesel1962[Hubel-Wiesel 1962<br/>cat V1 simple/complex cells] -.bio prior.-> LeNet51998
+  Fukushima1980[Neocognitron 1980<br/>S/C layers, unsupervised] -.structural skeleton.-> LeNet51998
+  Backprop1986[Backprop 1986<br/>Rumelhart-Hinton-Williams] -.optimizer.-> LeNet51998
+  LeNet11989[LeNet-1 1989<br/>first working CNN, USPS] -.direct ancestor.-> LeNet51998
+  TDNN1989[TDNN 1989<br/>1D weight sharing for speech] -.shared kernel idea.-> LeNet51998
+  LeNet51998[LeNet-5 1998<br/>conv + share + pool + e2e]
+  LeNet51998 --> AlexNet2012[AlexNet 2012<br/>deep CNN + GPU + ReLU]
+  LeNet51998 --> VGG2014[VGG 2014<br/>3x3 stacked conv]
+  LeNet51998 --> GoogLeNet2014[GoogLeNet 2014<br/>Inception multi-branch]
+  LeNet51998 --> ResNet2015[ResNet 2015<br/>residual + 4-stage backbone]
+  LeNet51998 --> UNet2015[U-Net 2015<br/>encoder-decoder segmentation]
+  LeNet51998 -.differentiable graph.-> CTC2006[CTC 2006<br/>differentiable seq loss]
+  LeNet51998 -.differentiable graph.-> AttnSeq2Seq2015[Attn Seq2Seq 2015<br/>end-to-end speech]
+  AlexNet2012 --> ViT2020[ViT 2020<br/>pure attention, no conv]
+  ResNet2015 --> ViT2020

@@ -1,0 +1,13 @@
+graph TD
+  T2017["2017 Transformer"] --> G2020["2020 GPT-3"]
+  G2020 --> I2022["2022 InstructGPT / RLHF"]
+  C2022["2022 Chinchilla / scaling"] --> G2024["2023 GPT-4"]
+  I2022 --> G2024
+  V2022["2022 Flamingo / multimodal few-shot"] --> G2024
+  G2024 --> S2023["2023 Sparks / capability probes"]
+  G2024 --> L2023["2023 LLaMA open-weight response"]
+  G2024 --> VLM2023["2023 LLaVA / GPT-4V imitation"]
+  G2024 --> R2024["2024 system cards and evals"]
+  G2024 --> O2024["2024 o1 / reasoning systems"]
+  L2023 --> D2025["2025 DeepSeek-R1 open reasoning"]
+  R2024 --> G2025["2025 frontier-model governance"]

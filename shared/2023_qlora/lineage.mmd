@@ -1,0 +1,19 @@
+graph LR
+    LORA["LoRA 2021<br/>low-rank adapter path"]
+    BNB["bitsandbytes 2021-2023<br/>low-bit optimizer kernels"]
+    LLAMA["LLaMA 2023.02<br/>open 7B-65B backbone"]
+    GPTQ["GPTQ 2022<br/>4-bit inference quantization"]
+    QLORA["QLoRA 2023.05<br/>4-bit frozen base + LoRA"]
+    GUANACO["Guanaco 2023<br/>single-GPU 65B chat tuning"]
+    PEFT["PEFT / Axolotl / Unsloth<br/>standard fine-tune stack"]
+    MODERN["Modern open LLM tuning<br/>Llama / Mistral / Qwen / DeepSeek"]
+    DORA["DoRA / LoftQ / QA-LoRA<br/>adapter and quantization variants"]
+
+    LORA --> QLORA
+    BNB --> QLORA
+    LLAMA --> QLORA
+    GPTQ --> QLORA
+    QLORA --> GUANACO
+    QLORA --> PEFT
+    PEFT --> MODERN
+    QLORA --> DORA

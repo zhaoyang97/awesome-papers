@@ -1,0 +1,19 @@
+graph LR
+  CART1984[CART 1984<br/>Breiman classification and regression trees] -.weak learner.-> RF2001
+  C45_1993[C4.5 1993<br/>Quinlan information gain trees] -.weak learner.-> RF2001
+  Bagging1996[Bagging 1996<br/>Breiman bootstrap aggregating] -.aggregation half.-> RF2001
+  Ho1998RSM[Ho 1998 Random Subspace<br/>random feature subset for trees] -.feature randomness half.-> RF2001
+  AmitGeman1997[Amit Geman 1997<br/>random features for digit recognition] -.split randomness.-> RF2001
+  AdaBoost1995[AdaBoost 1995<br/>Schapire Freund boosting] -.competing ensemble.-> RF2001
+  Dietterich2000[Dietterich 2000<br/>randomization survey] -.synthesis.-> RF2001
+  RF2001[Random Forest 2001<br/>Breiman bagging plus feature randomness]
+  RF2001 --> ExtraTrees2006[Extra-Trees 2006<br/>Geurts extreme randomization]
+  RF2001 --> GBM2001[GBM 2001<br/>Friedman gradient boosting machine]
+  GBM2001 --> XGBoost2016[XGBoost 2016<br/>Chen second-order boosted trees]
+  XGBoost2016 --> LightGBM2017[LightGBM 2017<br/>Microsoft histogram-based split]
+  LightGBM2017 --> CatBoost2018[CatBoost 2018<br/>Yandex ordered boosting]
+  RF2001 --> IsolationForest2008[Isolation Forest 2008<br/>Liu anomaly detection]
+  RF2001 --> Sklearn2010[scikit-learn 2010<br/>RandomForestClassifier baseline]
+  RF2001 --> SHAP2017[SHAP 2017<br/>Lundberg tree explanations]
+  RF2001 --> NODE2019[NODE 2019<br/>differentiable oblivious trees]
+  Sklearn2010 --> Kaggle2010s[Kaggle 2010s<br/>RF and GBM as default baseline]

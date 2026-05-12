@@ -1,0 +1,77 @@
+graph LR
+    %% Predecessors
+    A1["Deerwester et al. 1990<br/>LSA / LSI"]
+    A2["Hofmann 1999<br/>pLSA (direct opponent)"]
+    A3["MacKay & Peto 1995<br/>Hierarchical Dirichlet LM"]
+    A4["Jordan, Ghahramani,<br/>Jaakkola, Saul 1999<br/>Variational Methods"]
+    A5["Pearl 1988<br/>Bayesian Networks +<br/>Plate Notation"]
+    A6["Nigam et al. 2000<br/>Mixture of Unigrams"]
+
+    %% Main
+    MAIN["LDA 2003<br/>Blei, Ng, Jordan<br/>3-tier Bayesian + Variational EM"]
+
+    %% Direct descendants (inference)
+    B1["Griffiths & Steyvers 2004<br/>Collapsed Gibbs / PNAS"]
+    B2["Hoffman, Blei, Bach 2010<br/>Online VI / SVI"]
+    B3["Yuan et al. 2015<br/>LightLDA (1M topics)"]
+
+    %% Direct descendants (model)
+    B4["Blei et al. 2003<br/>hLDA / nCRP hierarchy"]
+    B5["Blei & Lafferty 2007<br/>Correlated Topic Model"]
+    B6["Blei & Lafferty 2006<br/>Dynamic Topic Models"]
+    B7["Blei & McAuliffe 2007<br/>Supervised LDA"]
+    B8["Rosen-Zvi et al. 2004<br/>Author-Topic Model"]
+
+    %% Neural successors
+    C1["Kingma & Welling 2014<br/>VAE (amortized VI)"]
+    C2["Srivastava & Sutton 2017<br/>ProdLDA / NTM"]
+    C3["Dieng, Ruiz, Blei 2020<br/>ETM (embedding topics)"]
+    C4["Grootendorst 2022<br/>BERTopic (modern default)"]
+
+    %% Cross-domain mis-readings
+    M1["Image patches as words<br/>BoVW + LDA scene labeling"]
+    M2["Genes as words<br/>LDA in computational biology"]
+    M3["Items as words<br/>LDA-based recommenders"]
+
+    %% Edges into MAIN
+    A1 -.geometric_baseline.-> MAIN
+    A2 -.fix_two_bugs.-> MAIN
+    A3 -.dirichlet_smoothing.-> MAIN
+    A4 -.inference_toolkit.-> MAIN
+    A5 -.plate_diagrams.-> MAIN
+    A6 -.single_topic_baseline.-> MAIN
+
+    %% Edges out of MAIN
+    MAIN ==inference==> B1
+    MAIN ==scale_up==> B2
+    MAIN ==industrial==> B3
+    MAIN ==hierarchy==> B4
+    MAIN ==correlations==> B5
+    MAIN ==time==> B6
+    MAIN ==supervised==> B7
+    MAIN ==authorship==> B8
+
+    %% Neural lineage
+    MAIN -.spiritual_descendant.-> C1
+    B2 ==svi_to_amortized==> C1
+    C1 ==> C2
+    MAIN -.embed_topics.-> C3
+    C3 ==> C4
+    MAIN ==replaced_by==> C4
+
+    %% Cross-domain
+    MAIN -.exchangeable_data.-> M1
+    MAIN -.exchangeable_data.-> M2
+    MAIN -.exchangeable_data.-> M3
+
+    classDef main fill:#fde68a,stroke:#b45309,stroke-width:2px,color:#1f2937;
+    classDef pred fill:#e0e7ff,stroke:#4338ca,color:#1f2937;
+    classDef desc fill:#dcfce7,stroke:#15803d,color:#1f2937;
+    classDef neural fill:#fce7f3,stroke:#be185d,color:#1f2937;
+    classDef misread fill:#fee2e2,stroke:#b91c1c,color:#1f2937;
+
+    class MAIN main;
+    class A1,A2,A3,A4,A5,A6 pred;
+    class B1,B2,B3,B4,B5,B6,B7,B8 desc;
+    class C1,C2,C3,C4 neural;
+    class M1,M2,M3 misread;

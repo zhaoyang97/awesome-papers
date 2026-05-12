@@ -1,0 +1,29 @@
+flowchart LR
+    MoE1991[Adaptive Mixtures 1991<br/>expert specialization idea]
+    Shazeer[Shazeer MoE 2017<br/>sparsely gated experts]
+    GShard[GShard 2020<br/>top-2 routing and expert parallelism]
+    Switch[Switch Transformer 2021<br/>simple sparse scaling]
+    MegaBlocks[MegaBlocks 2022<br/>efficient sparse kernels]
+    LLaMA[LLaMA 2023.02<br/>open dense decoder baseline]
+    Mistral7B[Mistral 7B 2023.09<br/>efficient dense base]
+    Mixtral[Mixtral 8x7B 2023.12<br/>open top-2 SMoE]
+    vLLM[vLLM support 2023<br/>servable open MoE]
+    DeepSeek[DeepSeekMoE / V2 2024<br/>larger open sparse systems]
+    QwenMoE[Qwen-MoE 2024-2025<br/>family-level sparse models]
+    DBRX[DBRX 2024<br/>open MoE at scale]
+    Future[Open sparse LLMs 2025+<br/>capacity vs active compute]
+
+    MoE1991 --> Shazeer
+    Shazeer --> GShard
+    GShard --> Switch
+    Switch --> Mixtral
+    MegaBlocks --> vLLM
+    LLaMA --> Mistral7B
+    Mistral7B --> Mixtral
+    Mixtral --> vLLM
+    Mixtral --> DeepSeek
+    Mixtral --> QwenMoE
+    Mixtral --> DBRX
+    DeepSeek --> Future
+    QwenMoE --> Future
+    DBRX --> Future

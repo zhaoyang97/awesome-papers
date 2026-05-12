@@ -1,0 +1,23 @@
+flowchart TD
+    GPS[1957-1972<br/>General Problem Solver<br/>symbolic heuristic search]
+    MCTS[2006-2016<br/>MCTS and AlphaGo<br/>value-guided tree search]
+    CoT[2022<br/>Chain-of-Thought<br/>single reasoning path]
+    SC[2022<br/>Self-Consistency<br/>sample many final paths]
+    ReAct[2022<br/>ReAct<br/>reasoning plus actions]
+    ToT[2023<br/>Tree of Thoughts<br/>LLM proposes and evaluates search states]
+    GoT[2023-2024<br/>Graph / Algorithm of Thoughts<br/>non-tree reasoning graphs]
+    LATS[2023-2024<br/>Language Agent Tree Search<br/>planning for agents]
+    TTC[2024-2025<br/>test-time compute<br/>o1 / R1 style long reasoning]
+    Misread[Common misread<br/>prompt trick rather than search interface]
+
+    GPS --> MCTS
+    GPS --> ToT
+    MCTS --> ToT
+    CoT --> SC
+    CoT --> ToT
+    SC --> ToT
+    ReAct --> ToT
+    ToT --> GoT
+    ToT --> LATS
+    ToT --> TTC
+    ToT -.-> Misread

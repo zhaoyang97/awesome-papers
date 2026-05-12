@@ -1,0 +1,13 @@
+graph LR
+  GPT3_2020[GPT-3 2020<br/>Scale + in-context learning] -.capability base.-> InstructGPT_2022
+  SummHF_2020[SummarizeHF 2020<br/>Preference to reward] -.RLHF precursor.-> InstructGPT_2022
+  PPO_2017[PPO 2017<br/>Stable policy optimization] -.optimization engine.-> InstructGPT_2022
+  Prompting_2021[Prompt Engineering 2021<br/>Instruction interface] -.product pressure.-> InstructGPT_2022
+  InstructGPT_2022[InstructGPT 2022<br/>SFT + RM + PPO with KL]
+  InstructGPT_2022 --> ChatGPT_2022[ChatGPT 2022<br/>Dialogue productization]
+  InstructGPT_2022 --> Sparrow_2022[Sparrow 2022<br/>Rule-grounded dialogue]
+  InstructGPT_2022 --> Claude_2023[Claude 2023<br/>Constitutional alignment]
+  InstructGPT_2022 --> Llama2Chat_2023[Llama2-Chat 2023<br/>Open RLHF stack]
+  InstructGPT_2022 --> RLAIF_2023[RLAIF 2023<br/>AI feedback scaling]
+  InstructGPT_2022 --> DPO_2023[DPO 2023<br/>Preference without online RL]
+  InstructGPT_2022 --> SafetySpec_2024[Spec-driven alignment 2024<br/>Policy + eval co-design]

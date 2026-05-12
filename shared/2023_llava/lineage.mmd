@@ -1,0 +1,28 @@
+flowchart TD
+    CLIP[CLIP 2021<br/>contrastive vision-language pretraining]
+    Flamingo[Flamingo 2022<br/>frozen LM plus visual bridge]
+    BLIP2[BLIP-2 2023<br/>Q-Former alignment]
+    LLaMA[LLaMA / Vicuna 2023<br/>open chat backbone]
+    GPT4[GPT-4 2023<br/>synthetic instruction teacher]
+    LLaVA[LLaVA 2023<br/>visual instruction tuning]
+    MiniGPT4[MiniGPT-4 2023<br/>parallel demo path]
+    InstructBLIP[InstructBLIP 2023<br/>instruction-aware VLM]
+    QwenVL[Qwen-VL 2023<br/>scaled open MLLM]
+    LLaVA15[LLaVA-1.5 2023<br/>strong baseline recipe]
+    GPT4V[GPT-4V 2023<br/>closed multimodal assistant]
+    Next[LLaVA-NeXT 2024<br/>higher-res and stronger eval]
+    InternVL[InternVL / MiniCPM-V 2024<br/>open MLLM scaling]
+
+    CLIP --> LLaVA
+    Flamingo -.bridge idea.-> LLaVA
+    BLIP2 -.two-stage alignment.-> LLaVA
+    LLaMA --> LLaVA
+    GPT4 --> LLaVA
+    MiniGPT4 -.same moment.-> LLaVA
+    LLaVA --> InstructBLIP
+    LLaVA --> QwenVL
+    LLaVA --> LLaVA15
+    LLaVA --> GPT4V
+    LLaVA15 --> Next
+    QwenVL --> InternVL
+    Next --> InternVL

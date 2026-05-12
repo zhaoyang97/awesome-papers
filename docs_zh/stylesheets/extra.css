@@ -1,0 +1,79 @@
+/* Hide the Material `(i)` indicator icon in the left nav (description tooltip). */
+.md-nav__link .md-nav__icon {
+  display: none !important;
+}
+
+/* Hide Material's per-page status badge in the left nav.
+   Material renders <span class="md-status md-status--v1"></span> next to
+   nav items whose frontmatter has `status:`. We use `status:` only as an
+   internal authoring marker (v1 / demo_v1 / ...) and do not want it shown. */
+.md-nav__link .md-status,
+.md-nav__item .md-status {
+  display: none !important;
+}
+
+/* ============================================================
+   Auto-numbered chapter headings (H2 = 1, H3 = 1.1)
+   ------------------------------------------------------------
+   Adds counters in BOTH the article body and the right-hand
+   table of contents so long deep-note pages (8 sections × many
+   sub-headings) become scannable.
+   Applied to article > h2/h3 only; H1 (page title) and
+   headings nested inside admonitions / details are skipped.
+   ============================================================ */
+
+/* --- Body: number H2 / H3 in article ------------------------ */
+.md-content article.md-typeset {
+  counter-reset: ap-h2;
+}
+.md-content article.md-typeset > h2 {
+  counter-increment: ap-h2;
+  counter-reset: ap-h3;
+}
+.md-content article.md-typeset > h2::before {
+  content: counter(ap-h2) ". ";
+  color: var(--md-default-fg-color--light);
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.15em;
+}
+.md-content article.md-typeset > h3 {
+  counter-increment: ap-h3;
+}
+.md-content article.md-typeset > h3::before {
+  content: counter(ap-h2) "." counter(ap-h3) " ";
+  color: var(--md-default-fg-color--light);
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.25em;
+}
+
+/* --- Right-hand TOC: same numbering scheme ------------------ */
+.md-sidebar--secondary .md-nav--secondary > .md-nav__list {
+  counter-reset: ap-toc-h2;
+}
+.md-sidebar--secondary .md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav__link {
+  counter-increment: ap-toc-h2;
+}
+.md-sidebar--secondary .md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav__link::before {
+  content: counter(ap-toc-h2) ". ";
+  color: var(--md-default-fg-color--light);
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.15em;
+}
+.md-sidebar--secondary .md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav {
+  counter-reset: ap-toc-h3;
+}
+.md-sidebar--secondary .md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item > .md-nav__link {
+  counter-increment: ap-toc-h3;
+}
+.md-sidebar--secondary .md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item > .md-nav__link::before {
+  content: counter(ap-toc-h2) "." counter(ap-toc-h3) " ";
+  color: var(--md-default-fg-color--light);
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.25em;
+}
+
+/* Tighten right-hand TOC line height a bit so even long pages
+   fit more comfortably on screen. */
+.md-sidebar--secondary .md-nav__link {
+  line-height: 1.4;
+}

@@ -1,0 +1,16 @@
+graph LR
+  Perceptron1958[Perceptron 1958<br/>single-layer rule] -.unsolved bug.-> Backprop1986
+  Minsky1969[Perceptrons 1969<br/>pessimism on multi-layer] -.reverse motivation.-> Backprop1986
+  Werbos1974[Werbos 1974<br/>thesis backprop derivation] -.independent rediscovery.-> Backprop1986
+  Boltzmann1985[Boltzmann Machine 1985<br/>sampling-based learning] -.same team rival.-> Backprop1986
+  Parker1985[Parker / LeCun 1985<br/>parallel rediscovery] -.coincident discovery.-> Backprop1986
+  Backprop1986[Backprop 1986<br/>chain rule + sigmoid]
+  Backprop1986 --> LeNet1998[LeNet 1989-1998<br/>conv backprop]
+  Backprop1986 --> LSTM1997[LSTM 1997<br/>backprop through time]
+  Backprop1986 --> AlexNet2012[AlexNet 2012<br/>GPU + ReLU revival]
+  AlexNet2012 --> ResNet2015[ResNet 2015<br/>152-layer backprop]
+  Backprop1986 --> Transformer2017[Transformer 2017<br/>attention + backprop]
+  Transformer2017 --> GPT2020[GPT family<br/>scaled backprop]
+  Backprop1986 --> Adam2014[Adam 2014<br/>adaptive optimizer]
+  Backprop1986 --> Autograd2017[PyTorch Autograd 2017<br/>auto-differentiation]
+  Backprop1986 --> ForwardForward2022[Forward-Forward 2022<br/>Hinton BP-free attempt]

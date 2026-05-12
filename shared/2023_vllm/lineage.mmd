@@ -1,0 +1,31 @@
+flowchart LR
+    VM1962[Virtual Memory 1962<br/>pages and address translation]
+    Transformer[Transformer 2017<br/>autoregressive attention]
+    GPT3[GPT-3 2020<br/>API-scale generation]
+    FlashAttention[FlashAttention 2022<br/>IO-aware attention kernels]
+    Orca[Orca 2022<br/>iteration-level scheduling]
+    FlexGen[FlexGen 2023<br/>memory-aware LLM inference]
+    vLLM[vLLM / PagedAttention 2023<br/>paged KV-cache serving]
+    FastChat[FastChat + LMSYS 2023<br/>arena-scale open serving]
+    TGI[TGI / TensorRT-LLM 2023+<br/>paged KV-cache becomes standard]
+    SGLang[SGLang 2024<br/>prefix sharing and RadixAttention]
+    DistServe[DistServe 2024<br/>prefill-decode disaggregation]
+    OpenModels[Open LLM ecosystems 2024+<br/>LLaMA Mixtral DeepSeek Qwen LLaVA]
+    Future[Modern inference stacks 2025+<br/>speculation quantization multimodal serving]
+
+    VM1962 --> vLLM
+    Transformer --> GPT3
+    GPT3 --> Orca
+    Transformer --> FlashAttention
+    FlashAttention --> vLLM
+    Orca --> vLLM
+    FlexGen --> vLLM
+    vLLM --> FastChat
+    vLLM --> TGI
+    vLLM --> SGLang
+    vLLM --> DistServe
+    FastChat --> OpenModels
+    TGI --> OpenModels
+    SGLang --> OpenModels
+    DistServe --> Future
+    OpenModels --> Future

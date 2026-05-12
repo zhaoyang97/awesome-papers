@@ -1,0 +1,26 @@
+flowchart LR
+  WaveNet["WaveNet / autoregressive waveform"]
+  Transformer["Transformer / next-token modeling"]
+  GSLM["GSLM / discrete speech units"]
+  W2VBERT["w2v-BERT / semantic tokens"]
+  SoundStream["SoundStream / neural codec"]
+  AudioLM["AudioLM / hybrid audio LM"]
+  SoundStorm["SoundStorm / parallel acoustic decoding"]
+  MusicLM["MusicLM / text-conditioned music"]
+  VALLE["VALL-E / codec-token TTS"]
+  Voicebox["Voicebox / controllable speech editing"]
+  SpeechLM["Modern speech and audio LMs"]
+
+  WaveNet --> AudioLM
+  Transformer --> AudioLM
+  GSLM --> AudioLM
+  W2VBERT --> AudioLM
+  SoundStream --> AudioLM
+  AudioLM --> SoundStorm
+  AudioLM --> MusicLM
+  AudioLM --> VALLE
+  AudioLM --> Voicebox
+  SoundStorm --> SpeechLM
+  MusicLM --> SpeechLM
+  VALLE --> SpeechLM
+  Voicebox --> SpeechLM

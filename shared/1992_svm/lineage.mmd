@@ -1,0 +1,34 @@
+graph LR
+    A1["Aizerman et al. 1964<br/>Potential Functions"]
+    A2["Vapnik & Lerner 1971<br/>Support Vectors Proto"]
+    A3["Cover 1965<br/>Random Projections"]
+    A4["Vapnik & Chervonenkis 1971<br/>VC-Dimension Theory"]
+    A5["Rosenblatt 1958<br/>Perceptron Convergence"]
+    
+    MAIN["SVM 1992<br/>Maximum Margin + Kernel"]
+    
+    B1["Platt 1998<br/>SMO Algorithm"]
+    B2["Schölkopf et al. 1999<br/>One-Class SVM"]
+    B3["Crammer & Singer 2002<br/>Multiclass SVM"]
+    B4["Schölkopf et al. 2000<br/>Kernel PCA"]
+    B5["Collobert & Bengio 2004<br/>SVM for NLP"]
+    B6["Smola & Schölkopf 2004<br/>SVM Tutorial"]
+    B7["Fan et al. 2005<br/>LIBSVM Library"]
+    B8["Cortes & Vapnik 1995<br/>Soft-margin SVM"]
+    B9["Schölkopf et al. 1997<br/>Normalized Kernels"]
+    
+    A1 -.kernel_idea.-> MAIN
+    A2 -.margin_concept.-> MAIN
+    A3 -.geometry.-> MAIN
+    A4 -.theory_foundation.-> MAIN
+    A5 -.linear_base.-> MAIN
+    
+    MAIN --> B1
+    MAIN --> B2
+    MAIN --> B3
+    MAIN --> B4
+    MAIN --> B5
+    MAIN --> B6
+    MAIN --> B7
+    MAIN --> B8
+    MAIN --> B9

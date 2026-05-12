@@ -1,0 +1,67 @@
+graph TD
+    %% ====== 前世（直接祖先 / 同期失败方案） ======
+    PCA[PCA<br/>Pearson 1901 / Hotelling 1933<br/>linear, on MNIST: 1 cloud]
+    Sammon[Sammon Mapping<br/>1969<br/>weighted MDS, still distance-preserving]
+    MDS[Classical MDS<br/>1952<br/>distance-preserving baseline]
+    Isomap[Isomap<br/>Tenenbaum et al. 2000<br/>geodesic MDS, single-manifold assumption]
+    LLE[LLE<br/>Roweis & Saul 2000<br/>local-only, no global control]
+    LE[Laplacian Eigenmaps<br/>Belkin & Niyogi 2003<br/>spectral, prone to crowding]
+    SNE[SNE<br/>Hinton & Roweis 2002<br/>KL+Gaussian, asymmetric]
+    UNISNE[UNI-SNE<br/>Cook, Sutskever, Mnih, Hinton 2007<br/>uniform mixture, not enough]
+
+    %% ====== 本文 ======
+    TSNE[t-SNE<br/>van der Maaten & Hinton 2008<br/>symmetric KL + Student-t low-dim]
+
+    %% ====== 今生（直接派生 / 后继） ======
+    BHTSNE[Barnes-Hut t-SNE<br/>van der Maaten 2014<br/>quad-tree O N log N]
+    LargeVis[LargeVis<br/>Tang et al. 2016<br/>sampled gradient, billion edges]
+    UMAP[UMAP<br/>McInnes et al. 2018<br/>fuzzy simplicial + cross-entropy]
+    FItSNE[FIt-SNE<br/>Linderman et al. 2019<br/>FFT interpolation, scRNA-seq default]
+    Param[Parametric t-SNE<br/>van der Maaten 2009<br/>neural net f_theta, OOS embedding]
+    TriMap[TriMap<br/>Amid & Warmuth 2019<br/>triplet loss, fix global structure]
+    PaCMAP[PaCMAP<br/>Wang et al. 2021<br/>near/mid/far triple weighting]
+    Distill[Distill.pub How-to-Use-t-SNE<br/>Wattenberg et al. 2016<br/>perplexity / seed warning]
+    SCANPY[SCANPY<br/>Wolf et al. 2018<br/>scRNA-seq standard, 100k+ Cell papers]
+
+    %% ====== 误读 / 站不住的假设 ======
+    Misread1[误读 1: 簇大小有意义<br/>实际是 perplexity artifact]
+    Misread2[误读 2: 全局距离可信<br/>实际只局部可信]
+    Misread3[误读 3: 簇间距离 = 类间相似度<br/>多次随机种子结果不同]
+
+    %% ====== 边 ======
+    PCA --> SNE
+    MDS --> Sammon
+    Sammon --> SNE
+    Isomap --> SNE
+    LLE --> SNE
+    LE --> SNE
+    SNE --> UNISNE
+    SNE --> TSNE
+    UNISNE --> TSNE
+
+    TSNE --> BHTSNE
+    TSNE --> Param
+    TSNE --> LargeVis
+    BHTSNE --> FItSNE
+    BHTSNE --> UMAP
+    LargeVis --> UMAP
+    UMAP --> SCANPY
+    FItSNE --> SCANPY
+    TSNE --> Distill
+    UMAP --> TriMap
+    TriMap --> PaCMAP
+
+    TSNE -.-> Misread1
+    TSNE -.-> Misread2
+    TSNE -.-> Misread3
+
+    %% ====== 风格 ======
+    classDef present fill:#fff2b3,stroke:#a37200,stroke-width:3px,color:#3a2c00
+    classDef ancestor fill:#d6e9ff,stroke:#1f4e89,color:#0c1d36
+    classDef descendant fill:#d4f4dd,stroke:#1d6e2a,color:#0c2a13
+    classDef misread fill:#ffd7d7,stroke:#a01818,color:#3a0808,stroke-dasharray:4 3
+
+    class TSNE present
+    class PCA,MDS,Sammon,Isomap,LLE,LE,SNE,UNISNE ancestor
+    class BHTSNE,LargeVis,UMAP,FItSNE,Param,TriMap,PaCMAP,Distill,SCANPY descendant
+    class Misread1,Misread2,Misread3 misread

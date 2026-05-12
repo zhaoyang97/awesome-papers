@@ -1,0 +1,34 @@
+graph LR
+    MP[McCulloch-Pitts 1943<br/>Logical neurons]
+    HB[Hebb 1949<br/>Synaptic plasticity]
+    SH[Shannon 1948<br/>Information theory]
+    WN[Wiener 1948<br/>Cybernetics]
+    SF[Selfridge 1955<br/>Pandemonium machine]
+    
+    MP -.theoretical framework.-> PERC[Perceptron 1958<br/>Learning convergence]
+    HB -.learning inspiration.-> PERC
+    SH -.probabilistic foundation.-> PERC
+    WN -.adaptive method.-> PERC
+    SF -.multi-layer architecture.-> PERC
+    
+    PERC --> BP[Backpropagation 1986<br/>Rumelhart]
+    PERC --> SVM[Support Vector Machines 1992<br/>Vapnik]
+    PERC --> LDA[Linear Discrimination<br/>Statistics]
+    
+    BP --> CNN[Convolutional Nets 1998<br/>LeCun]
+    BP --> LSTM[LSTM 1997<br/>Hochreiter]
+    CNN --> VGG[VGG/ResNet 2014-2015<br/>Deep CNNs]
+    
+    SVM --> KERNEL[Kernel Methods 2000s<br/>Nonlinear mapping]
+    KERNEL --> LS[RBF basis functions<br/>Hidden space]
+    
+    VGG --> TRANS[Transformer 2017<br/>Self-attention]
+    TRANS --> BERT[BERT 2018<br/>Pre-training]
+    BERT --> GPT[GPT 2020+<br/>Generative]
+    
+    style PERC fill:#ff9999
+    style MP fill:#e0e0ff
+    style HB fill:#e0e0ff
+    style SH fill:#e0e0ff
+    style WN fill:#e0e0ff
+    style SF fill:#e0e0ff

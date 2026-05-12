@@ -1,0 +1,15 @@
+flowchart LR
+    Transformer2017["Transformer (2017)"] --> GPT3_2020["GPT-3 (2020)"]
+    Scaling2020["Scaling Laws (2020)"] --> Chinchilla2022["Chinchilla (2022)"]
+    Chinchilla2022 --> Llama3_2024["Llama 3 Herd (2024)"]
+    Transformer2017 --> LLaMA2023["LLaMA (2023)"]
+    LLaMA2023 --> Llama2_2023["Llama 2 (2023)"]
+    Llama2_2023 --> Llama3_2024
+    DPO2023["DPO (2023)"] --> Llama3_2024
+    vLLM2023["vLLM / PagedAttention (2023)"] --> Llama3_2024
+    Llama3_2024 --> LlamaStack2024["Llama Stack (2024)"]
+    Llama3_2024 --> OpenFrontier2025["Open Frontier Models (2025)"]
+    Llama3_2024 --> Distillation2025["Synthetic Data and Distillation"]
+    Llama3_2024 --> SafetyTools2024["Llama Guard / Prompt Guard"]
+    GPT4_2023["GPT-4 Closed Frontier (2023)"] -. comparison target .-> Llama3_2024
+    MoE2024["Sparse MoE Route"] -. deliberately avoided .-> Llama3_2024

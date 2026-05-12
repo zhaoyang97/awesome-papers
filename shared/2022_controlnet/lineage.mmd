@@ -1,0 +1,22 @@
+graph LR
+  Pix2Pix2017[Pix2Pix 2017<br/>cond GAN paired training] -.classical condition prototype.-> ControlNet2023
+  Adapter2019[Adapter 2019<br/>NLP PEFT freeze and add] -.PEFT ancestor.-> ControlNet2023
+  HyperNet2016[HyperNetworks 2016<br/>side branch generates weights] -.spiritual cousin.-> ControlNet2023
+  LoRA2021[LoRA 2021<br/>low-rank residual identity init] -.PEFT trinity.-> ControlNet2023
+  DDPM2020[DDPM 2020<br/>noise pred U-Net] -.objective + backbone.-> SD2022
+  SD2022[Stable Diffusion 2022<br/>frozen prior to attach to] -->|host model| ControlNet2023
+  CFG2022[CFG 2022<br/>condition dropout trick] -.training recipe.-> ControlNet2023
+  T2IAdapter2023[T2I-Adapter Feb 2023<br/>concurrent lighter rival] -.6-day race.-> ControlNet2023
+  GLIGEN2023[GLIGEN Jan 2023<br/>box-level grounding] -.concurrent baseline.-> ControlNet2023
+  Composer2023[Composer Feb 2023<br/>retrain from scratch baseline] -.concurrent baseline.-> ControlNet2023
+  ControlNet2023[ControlNet 2023<br/>zero-conv + trainable copy<br/>USB-C of diffusion]
+  ControlNet2023 --> ControlNet11[ControlNet 1.1 2023<br/>14 conditions, soft-edge, tile]
+  ControlNet2023 --> IPAdapter2023[IP-Adapter 2023<br/>ControlNet for image prompts]
+  ControlNet2023 --> UniControlNet2023[Uni-ControlNet 2023<br/>multi-condition unified adapter]
+  ControlNet2023 --> AnimateDiff2023[AnimateDiff 2023<br/>per-frame ControlNet for video]
+  ControlNet2023 --> ControlVideo2023[ControlVideo 2023<br/>shared attention + ControlNet]
+  ControlNet2023 --> InstantID2024[InstantID 2024<br/>identity ControlNet on SDXL]
+  ControlNet2023 --> ControlNetPlusPlus2024[ControlNet++ 2024<br/>cycle-consistency feedback]
+  ControlNet2023 --> SDXLControl2024[SDXL-ControlNet 2024<br/>same recipe on 2.6B base]
+  ControlNet2023 --> PowerPaint2024[PowerPaint 2024<br/>inpainting via ControlNet]
+  ControlNet2023 --> ComfyUI[ComfyUI / WebUI<br/>built-in control nodes]

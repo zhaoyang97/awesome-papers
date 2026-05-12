@@ -1,0 +1,16 @@
+flowchart LR
+    SurfaceSplatting["Surface Splatting<br/>2001"] --> EWAVolume["EWA Volume Splatting<br/>2002"]
+    EWAVolume --> PointGraphics["Point-Based Graphics<br/>2000s"]
+    PointGraphics --> NeRF["NeRF<br/>2020"]
+    NeRF --> Plenoxels["Plenoxels<br/>2021"]
+    NeRF --> InstantNGP["Instant-NGP<br/>2022"]
+    NeRF --> MipNeRF360["Mip-NeRF 360<br/>2022"]
+    Plenoxels --> ThreeDGS["3D Gaussian Splatting<br/>2023"]
+    InstantNGP --> ThreeDGS
+    MipNeRF360 --> ThreeDGS
+    ThreeDGS --> Dynamic3DGS["Dynamic / 4D-GS<br/>2023"]
+    ThreeDGS --> SuGaR["SuGaR / 2DGS<br/>2023-2024"]
+    ThreeDGS --> SplaTAM["SplaTAM / Gaussian SLAM<br/>2023"]
+    ThreeDGS --> DreamGaussian["DreamGaussian / Text-to-3D<br/>2023"]
+    ThreeDGS --> GaussianAvatars["Gaussian Avatars<br/>2024"]
+    ThreeDGS -. common misread .-> JustParticles["Not just particles:<br/>optimization + visibility + SH color"]

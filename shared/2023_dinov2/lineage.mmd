@@ -1,0 +1,25 @@
+flowchart LR
+    ViT[ViT 2020<br/>patch tokens as visual sequence]
+    DINO[DINO 2021<br/>self-distilled ViT features]
+    IBOT[iBOT 2021<br/>masked patch self-distillation]
+    CLIP[CLIP 2021<br/>image-text foundation features]
+    OpenCLIP[OpenCLIP 2022<br/>open LAION-scale baseline]
+    Data[LVD-142M 2023<br/>curated 142M image corpus]
+    DINOv2[DINOv2 2023<br/>robust SSL visual backbone]
+    Registers[ViT Registers 2023<br/>cleaner dense maps]
+    Depth[Depth Anything 2024<br/>DINOv2-style depth teacher]
+    DinoText[DINOv2 Meets Text 2024<br/>language-aligned dense features]
+    Robotics[Robotics / 3D / remote sensing 2024+<br/>frozen geometry-rich backbone]
+    Biology[Cell-DINO / XRay-DINO 2025<br/>domain-specific SSL backbones]
+
+    ViT --> DINO
+    DINO --> DINOv2
+    IBOT --> DINOv2
+    CLIP --> OpenCLIP
+    OpenCLIP -.failure baseline for dense detail.-> DINOv2
+    Data --> DINOv2
+    DINOv2 --> Registers
+    DINOv2 --> Depth
+    DINOv2 --> DinoText
+    DINOv2 --> Robotics
+    DINOv2 --> Biology

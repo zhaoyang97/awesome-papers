@@ -1,0 +1,14 @@
+graph LR
+    A[RT-1 2022<br/>multitask robot transformer] --> D[RT-2 2023<br/>VLA: action as language]
+    B[PaLM-E 2023<br/>embodied multimodal LM] --> D
+    C[PaLI-X 2023<br/>web-scale VLM] --> D
+    E[SayCan 2022<br/>LLM planner + robot affordance] --> D
+    F[Flamingo/CLIP 2021-22<br/>vision-language pretraining] --> C
+    G[Behavior Cloning<br/>robot demonstrations] --> A
+    D --> H[Open X-Embodiment 2023<br/>cross-embodiment data]
+    D --> I[RT-H 2024<br/>action hierarchy]
+    D --> J[Octo 2024<br/>open generalist policy]
+    D --> K[OpenVLA 2024<br/>open-source VLA]
+    D --> L[pi0 2024<br/>flow matching action expert]
+    D -.misreading.-> M[Just add a bigger VLM<br/>without better robot data]
+    D -.misreading.-> N[Language tokens solve control<br/>without safety feedback]

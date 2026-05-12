@@ -1,0 +1,19 @@
+graph LR
+  Werbos1990[Werbos 1990<br/>BPTT] -.training algorithm.-> LSTM1997
+  RTRL1989[Williams Zipser 1989<br/>RTRL] -.gradient computation.-> LSTM1997
+  Hochreiter1991[Hochreiter 1991<br/>vanishing gradient diagnosis] -.problem statement.-> LSTM1997
+  Bengio1994[Bengio 1994<br/>long-dep impossibility theorem] -.formal motivation.-> LSTM1997
+  Schmidhuber1992[Schmidhuber 1992<br/>chunker] -.architecture precursor.-> LSTM1997
+  LSTM1997[LSTM 1997<br/>CEC plus gates]
+  LSTM1997 --> Gers1999[Gers 1999<br/>forget gate]
+  LSTM1997 --> Gers2000[Gers 2000<br/>peephole connections]
+  LSTM1997 --> Graves2005[Graves 2005<br/>BLSTM speech]
+  LSTM1997 --> Graves2013[Graves 2013<br/>handwriting deep LSTM]
+  LSTM1997 --> Sutskever2014[Sutskever 2014<br/>seq2seq translation]
+  LSTM1997 --> GRU2014[Cho 2014<br/>GRU]
+  LSTM1997 --> Bahdanau2014[Bahdanau 2014<br/>attention augments LSTM]
+  LSTM1997 --> NTM2014[NTM 2014<br/>external memory]
+  LSTM1997 --> Highway2015[Highway Networks 2015<br/>gating in feedforward]
+  LSTM1997 --> Transformer2017[Transformer 2017<br/>residual replaces gating]
+  Transformer2017 --> GPT[GPT family]
+  LSTM1997 --> Mamba2023[Mamba 2023<br/>selective SSM revives linear RNN]

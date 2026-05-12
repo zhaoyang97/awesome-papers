@@ -1,0 +1,21 @@
+graph LR
+  Smolensky1986[Smolensky 1986<br/>Harmony Theory / RBM prototype] -.energy model.-> DBN2006
+  Boltzmann1985[Boltzmann Machine 1985<br/>fully-connected energy model] -.restricted into bipartite.-> DBN2006
+  Backprop1986[Backprop 1986<br/>chain rule training] -.fine-tune phase.-> DBN2006
+  HintonCD2002[Hinton 2002 CD<br/>fast surrogate gradient] -.training algorithm.-> DBN2006
+  Bengio2003[Bengio 2003 Vanishing<br/>diagnosed deep MLP failure] -.problem statement.-> DBN2006
+  HintonScience2006[Hinton & Salakhutdinov 2006<br/>Science autoencoder] -.sister paper.-> DBN2006
+  DBN2006[DBN 2006<br/>greedy layer-wise pretrain]
+  DBN2006 --> Bengio2007GLW[Bengio 2007 GLW<br/>autoencoder pretraining]
+  DBN2006 --> Vincent2008DAE[Vincent 2008 Denoising AE<br/>simpler than RBM]
+  DBN2006 --> Lee2009ConvDBN[Lee 2009 Conv DBN<br/>image extension]
+  DBN2006 --> Salakhutdinov2009DBM[Salakhutdinov 2009 DBM<br/>fully undirected variant]
+  DBN2006 --> AlexNet2012[AlexNet 2012<br/>supervised takeover]
+  AlexNet2012 --> ResNet2015[ResNet 2015<br/>identity shortcut]
+  DBN2006 --> Word2Vec2013[Word2Vec 2013<br/>unsupervised embedding]
+  Word2Vec2013 --> BERT2018[BERT 2018<br/>masked LM pretrain]
+  BERT2018 --> GPT3_2020[GPT-3 2020<br/>autoregressive pretrain]
+  DBN2006 --> VAE2013[VAE 2013<br/>variational generative]
+  VAE2013 --> DDPM2020[DDPM 2020<br/>diffusion generative]
+  DBN2006 --> MAE2022[MAE 2022<br/>masked image pretrain]
+  DBN2006 --> SimCLR2020[SimCLR 2020<br/>contrastive pretrain]
