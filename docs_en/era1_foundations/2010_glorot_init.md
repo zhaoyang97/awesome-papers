@@ -1,5 +1,5 @@
 ---
-title: "Understanding the difficulty of training deep feedforward neural networks"
+title: "Glorot Init — Making Deep Networks Pass Signals Before They Learn"
 year: 2010
 authors: ["Xavier Glorot", "Yoshua Bengio"]
 affiliation: "Universite de Montreal"
@@ -13,7 +13,7 @@ paper: "https://proceedings.mlr.press/v9/glorot10a.html"
 zh_version: "/era1_foundations/2010_glorot_init/"
 ---
 
-# Understanding the difficulty of training deep feedforward neural networks
+# Glorot Init — Making Deep Networks Pass Signals Before They Learn
 
 > **In May 2010, Xavier Glorot and Yoshua Bengio presented [Understanding the difficulty of training deep feedforward neural networks](https://proceedings.mlr.press/v9/glorot10a.html) at AISTATS.** The paper is often remembered as the source of the Xavier initialization formula, but its sharper identity is diagnostic: why did deep nets after 2006 still need RBM or autoencoder pretraining when backpropagation already existed? The answer was not merely "vanishing gradients." Sigmoid's positive mean pushed upper layers into saturation, random weights let activation and gradient variances drift with depth, and the layer Jacobian's singular values wandered away from 1. ReLU, He initialization, BatchNorm, residual networks, and modern scaling rules all continue the same repair program: before a deep model can learn, signals must be able to pass through it.
 

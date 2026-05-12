@@ -15,6 +15,11 @@
    CollectionPage, ScholarlyArticle) + BreadcrumbList — mirrors paper_notes. #}
 {% block extrahead %}
   {{ super() }}
+
+  {# Tell crawlers we welcome indexing with rich snippets / large images. #}
+  <meta name="robots" content="index,follow,max-snippet:180,max-image-preview:large" />
+  <meta name="googlebot" content="index,follow,max-snippet:180,max-image-preview:large" />
+
   <style>
     .md-header__title a.site-name-link {
       color: inherit;
@@ -75,6 +80,55 @@
       } else {
         wrapSiteName();
       }
+
+      // ── Language switcher: keep the current page when toggling zh ↔ en. ──
+      // Material's `extra.alternate` uses the literal `link:` value (e.g. "/" or
+      // "/en/"), which always sends users back to the homepage. Rewrite the
+      // header dropdown links so each one points at the *same* page in the
+      // other language. If the partner page doesn't exist the user lands on
+      // a 404, which is preferable to silently throwing away the current page.
+      function targetForLang(lang) {
+        var path = window.location.pathname || '/';
+        var inEn = path.indexOf('/en/') === 0 || path === '/en';
+        var rest = inEn ? (path.replace(/^\/en/, '') || '/') : path;
+        if (lang === 'en') {
+          return inEn ? path : ('/en' + rest);
+        }
+        // Treat any non-`en` lang (e.g. `zh`, `zh-CN`) as the Chinese site.
+        return inEn ? rest : path;
+      }
+      function rewriteLangLinks() {
+        var links = document.querySelectorAll('.md-header a[hreflang]');
+        for (var i = 0; i < links.length; i++) {
+          var lang = links[i].getAttribute('hreflang');
+          if (!lang) continue;
+          links[i].setAttribute('href', targetForLang(lang));
+        }
+      }
+      // Hijack clicks at capture phase so we win against Material's instant
+      // navigation and any DOM mutations that swap headers between pages.
+      document.addEventListener('click', function (e) {
+        var a = e.target && e.target.closest && e.target.closest('a[hreflang]');
+        if (!a) return;
+        if (!a.closest('.md-header')) return;
+        var lang = a.getAttribute('hreflang');
+        if (!lang) return;
+        var dest = targetForLang(lang) +
+          (window.location.search || '') +
+          (window.location.hash || '');
+        var current = window.location.pathname +
+          (window.location.search || '') +
+          (window.location.hash || '');
+        if (dest === current) return; // already on that language
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.assign(dest);
+      }, true);
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', rewriteLangLinks);
+      } else {
+        rewriteLangLinks();
+      }
     })();
   </script>
 
@@ -97,6 +151,14 @@
   {# Description: frontmatter first, then site_description fallback. #}
   {% set _desc_raw = (page.meta.description if page.meta and page.meta.description else (config.site_description | default(''))) %}
   {% set _desc = _desc_raw | e %}
+
+  {# Common frontmatter (used in <meta>, OG, JSON-LD): keywords / arxiv / code. #}
+  {% set _kw = (page.meta.keywords if page.meta and page.meta.keywords else []) %}
+  {% set _arxiv = (page.meta.arxiv if page.meta and page.meta.arxiv else '') %}
+  {% if _arxiv == 'https://arxiv.org/abs/' %}{% set _arxiv = '' %}{% endif %}
+  {% set _code = (page.meta.code if page.meta and page.meta.code else '') %}
+  {% set _conf = (page.meta.conference if page.meta and page.meta.conference else '') %}
+  {% set _year = (page.meta.year if page.meta and page.meta.year else '') %}
 
   {# ── hreflang: bilingual alternate URLs (zh ↔ en) ───────────────
      Both sites share host https://awesome.papernotes.org. Pages declare
@@ -147,6 +209,16 @@
   <meta name="twitter:title" content="{{ _seo_title }}" />
   <meta name="twitter:description" content="{{ _desc }}" />
 
+  {# ── Keywords from frontmatter (paper pages have rich keyword arrays) ── #}
+  {% if _kw %}
+  <meta name="keywords" content="{{ (_kw | join(', ')) | e }}" />
+  {% if _is_paper %}
+  {% for tag in _kw %}
+  <meta property="article:tag" content="{{ tag | e }}" />
+  {% endfor %}
+  {% endif %}
+  {% endif %}
+
   {# ── JSON-LD ──────────────────────────────────────────────────────
      All string values use ``| tojson`` (NOT ``| e``) to avoid GSC
      "Bad escape sequence in string" errors when titles/descriptions
@@ -162,6 +234,14 @@
     "url": {{ page.canonical_url | tojson }},
     "description": {{ _desc_raw | tojson }},
     "inLanguage": {{ ('zh-CN' if config.theme.language == 'zh' else 'en') | tojson }},
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": {{ ((page.canonical_url | trim('/')) ~ '/?q={search_term_string}') | tojson }}
+      },
+      "query-input": "required name=search_term_string"
+    },
     "author": {
       "@type": "Person",
       "name": "ZhaoYang",
@@ -179,6 +259,14 @@
     "description": {{ _desc_raw | tojson }},
     "url": {{ page.canonical_url | tojson }},
     "inLanguage": {{ ('zh-CN' if config.theme.language == 'zh' else 'en') | tojson }},
+    {% if _kw %}
+    "keywords": {{ (_kw | join(', ')) | tojson }},
+    "about": [
+      {%- for tag in _kw[:10] %}
+      { "@type": "Thing", "name": {{ tag | tojson }} }{% if not loop.last %},{% endif %}
+      {%- endfor %}
+    ],
+    {% endif %}
     "isPartOf": {
       "@type": "WebSite",
       "name": {{ config.site_name | tojson }},
@@ -196,11 +284,39 @@
     "headline": {{ _seo_title_raw | tojson }},
     "description": {{ _desc_raw | tojson }},
     "url": {{ page.canonical_url | tojson }},
+    "mainEntityOfPage": {{ page.canonical_url | tojson }},
     "inLanguage": {{ ('zh-CN' if config.theme.language == 'zh' else 'en') | tojson }},
+    "isAccessibleForFree": true,
+    "learningResourceType": {{ ('AI paper deep-dive note' if config.theme.language == 'en' else '论文深度解读笔记') | tojson }},
+    "genre": {{ ('AI / Machine Learning' if config.theme.language == 'en' else '人工智能 / 机器学习') | tojson }},
     "datePublished": {{ (page.meta.date | default(config.extra.build_date | default(''))) | string | tojson }},
     "dateModified": {{ (page.meta.date | default(config.extra.build_date | default(''))) | string | tojson }},
-    {% if page.meta and page.meta.keywords %}
-    "keywords": {{ (page.meta.keywords | join(', ')) | tojson }},
+    {% if _kw %}
+    "keywords": {{ (_kw | join(', ')) | tojson }},
+    "about": [
+      {%- for tag in _kw[:10] %}
+      { "@type": "Thing", "name": {{ tag | tojson }} }{% if not loop.last %},{% endif %}
+      {%- endfor %}
+    ],
+    {% endif %}
+    {% if _arxiv or _code %}
+    "sameAs": [
+      {%- set _refs = [] -%}
+      {%- if _arxiv %}{% set _refs = _refs + [_arxiv] %}{% endif -%}
+      {%- if _code %}{% set _refs = _refs + [_code] %}{% endif -%}
+      {%- for u in _refs %}
+      {{ u | tojson }}{% if not loop.last %},{% endif %}
+      {%- endfor %}
+    ],
+    {% endif %}
+    {% if _arxiv %}
+    "citation": {
+      "@type": "ScholarlyArticle",
+      "name": {{ _seo_title_raw | tojson }},
+      "url": {{ _arxiv | tojson }}{% if _conf %},
+      "publication": {{ _conf | tojson }}{% endif %}{% if _year %},
+      "datePublished": {{ _year | string | tojson }}{% endif %}
+    },
     {% endif %}
     {% if page.meta and page.meta.authors %}
     "author": [
@@ -217,7 +333,8 @@
     {% endif %}
     "publisher": {
       "@type": "Organization",
-      "name": {{ config.site_name | tojson }}
+      "name": {{ config.site_name | tojson }},
+      "url": {{ config.site_url | tojson }}
     },
     "isPartOf": {
       "@type": "WebSite",

@@ -4,10 +4,15 @@
 
 [English](README_en.md) | **中文**
 
-**站点**：
 
-- 中文站：<https://awesome.papernotes.org/>
-- English site: <https://awesome.papernotes.org/en/>
+## 🌐 在线阅读
+
+- 中文站：**<https://awesome.papernotes.org/>**
+- English site: **<https://awesome.papernotes.org/en/>**
+
+> 💡 **提示**：如果数学公式渲染异常，刷新页面通常可以解决。
+
+## 📊 收录概览
 
 | 时代 | 时间范围 | 主题代表 | 收录数 |
 |------|----------|----------|--------|
@@ -17,9 +22,8 @@
 | Era 4 · 基础模型 | 2020-2022 | GPT-3 / DDPM / ViT / CLIP / AlphaFold2 / Stable Diffusion / CoT | 35 |
 | Era 5 · 大模型时代 | 2023-present | LLaMA / SAM / DPO / Mamba / Sora / o1 / DeepSeek-R1 | 28 |
 
----
 
-## 全部笔记（按时代分组）
+## 📖 全部笔记（按时代分组）
 
 ### 1 · 神经网络萌芽 (1957-2011)
 
@@ -30,15 +34,15 @@
 - **1997** · [LSTM — 用门控机制让循环网络第一次记得住长依赖](docs_zh/era1_foundations/1997_lstm.md)
 - **1998** · [LeNet — 把卷积、池化与反向传播缝合成第一个工业级深度网络](docs_zh/era1_foundations/1998_lenet.md)
 - **2001** · [Random Forests — 用 bagging + 特征采样把决策树推上当年 ML 的王座](docs_zh/era1_foundations/2001_random_forests.md)
-- **2003** · [Latent Dirichlet Allocation](docs_zh/era1_foundations/2003_lda.md)
+- **2003** · [LDA — 用 Dirichlet 先验把 pLSA 升级成可推广的全贝叶斯主题模型](docs_zh/era1_foundations/2003_lda.md)
 - **2006** · [DBN — 用逐层贪婪预训练让深层神经网络第一次「被训得动」](docs_zh/era1_foundations/2006_dbn.md)
-- **2006** · [Reducing the Dimensionality of Data with Neural Networks](docs_zh/era1_foundations/2006_autoencoder.md)
-- **2008** · [Visualizing Data using t-SNE](docs_zh/era1_foundations/2008_tsne.md)
+- **2006** · [Autoencoder — 用 RBM 预训练把神经网络从冷宫里唤醒](docs_zh/era1_foundations/2006_autoencoder.md)
+- **2008** · [t-SNE — 高维数据可视化的视觉语言](docs_zh/era1_foundations/2008_tsne.md)
 - **2009** · [ImageNet — 用 1500 万张图把「数据集」变成深度学习革命的引信](docs_zh/era1_foundations/2009_imagenet.md)
-- **2010** · [RNN-LM - 把语言模型从固定窗口带进连续隐状态](docs_zh/era1_foundations/2010_rnnlm.md)
+- **2010** · [RNN-LM — 把语言模型从固定窗口带进连续隐状态](docs_zh/era1_foundations/2010_rnnlm.md)
 - **2010** · [Stacked Denoising Autoencoders — 用局部去噪准则把自编码器变成深度预训练工具](docs_zh/era1_foundations/2010_stacked_dae.md)
-- **2010** · [Understanding the difficulty of training deep feedforward neural networks](docs_zh/era1_foundations/2010_glorot_init.md)
-- **2011** · [Deep Sparse Rectifier Neural Networks](docs_zh/era1_foundations/2011_relu.md)
+- **2010** · [Glorot Init — 让深度网络先把信号传过去](docs_zh/era1_foundations/2010_glorot_init.md)
+- **2011** · [ReLU — 一个 max(0, x) 如何把深度网络从「实验室玩具」变成「工业基石」](docs_zh/era1_foundations/2011_relu.md)
 
 ### 2 · 深度学习复兴 (2012-2016)
 
@@ -170,9 +174,8 @@
 - **2025** · [DeepSeek-R1 — 纯强化学习如何让开源 LLM 学会推理](docs_zh/era5_genai_explosion/2025_deepseek_r1.md)
 - **2025** · [Qwen2.5 / Qwen3 - 阿里通义千问如何把开放模型做成全栈模型族](docs_zh/era5_genai_explosion/2025_qwen3.md)
 
----
 
-## 仓库结构
+## 📂 仓库结构
 
 ```
 awesome-papers/
@@ -206,8 +209,6 @@ awesome-papers/
 └── shared/<slug>/lineage.mmd             # Mermaid citation-graph sources shared by zh/en notes
 ```
 
----
-
-## License
+## 📄 License
 
 CC-BY-NC 4.0

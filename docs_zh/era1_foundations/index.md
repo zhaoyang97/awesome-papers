@@ -16,7 +16,7 @@
 - [DBN — Hinton 用 RBM 逐层预训练点燃了第三次深度学习革命](2006_dbn.md) · 2006 · Hinton, Osindero & Teh
 - [t-SNE — 高维数据可视化的视觉语言](2008_tsne.md) · 2008 · van der Maaten & Hinton
 - [ImageNet — 一个数据集如何点燃 2012 AlexNet 的导火索](2009_imagenet.md) · 2009 · Deng, Dong, Socher, Li, Li & Fei-Fei
-- [Glorot init — 让深度网络先把信号传过去](2010_glorot_init.md) · 2010 · Glorot & Bengio
+- [Glorot Init — 让深度网络先把信号传过去](2010_glorot_init.md) · 2010 · Glorot & Bengio
 - [RNN-LM — 把语言模型从固定窗口带进连续隐状态](2010_rnnlm.md) · 2010 · Mikolov et al.
 - [Stacked Denoising Autoencoders — 用局部去噪准则把自编码器变成深度预训练工具](2010_stacked_dae.md) · 2010 · Vincent, Larochelle, Lajoie, Bengio & Manzagol
 - [ReLU — 一个 max(0, x) 如何把深度网络从"实验室玩具"变成"工业基石"](2011_relu.md) · 2011 · Glorot, Bordes & Bengio

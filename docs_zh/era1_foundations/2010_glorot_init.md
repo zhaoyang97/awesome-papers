@@ -1,5 +1,5 @@
 ---
-title: "Understanding the difficulty of training deep feedforward neural networks"
+title: "Glorot Init — 让深度网络先把信号传过去"
 year: 2010
 authors: ["Xavier Glorot", "Yoshua Bengio"]
 affiliation: "Universite de Montreal"
@@ -13,7 +13,7 @@ paper: "https://proceedings.mlr.press/v9/glorot10a.html"
 en_version: "/en/era1_foundations/2010_glorot_init/"
 ---
 
-# Understanding the difficulty of training deep feedforward neural networks
+# Glorot Init — 让深度网络先把信号传过去
 
 > **2010 年 5 月，Xavier Glorot 与 Yoshua Bengio 在 AISTATS 发表 [Understanding the difficulty of training deep feedforward neural networks](https://proceedings.mlr.press/v9/glorot10a.html)。** 这篇 8 页论文最容易被误读成「Xavier 初始化公式出处」，但它更像一份病理报告：为什么 2006-2010 年的深网明明有 backprop，却仍要靠 RBM / autoencoder 预训练才能训起来？答案不是一句「梯度消失」就够了，而是 sigmoid 的非零均值把上层推入饱和、随机权重让前向方差和反向梯度逐层漂移、层 Jacobian 的奇异值远离 1。后来的 ReLU、He init、BatchNorm、ResNet 都是在继续修这份诊断书里指出的同一个问题：深度网络首先要让信号穿得过去。
 

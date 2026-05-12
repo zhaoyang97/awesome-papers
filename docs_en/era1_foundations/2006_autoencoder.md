@@ -1,5 +1,5 @@
 ---
-title: "Reducing the Dimensionality of Data with Neural Networks"
+title: "Autoencoder — RBM Pretraining Wakes Neural Networks From Cold Storage"
 year: 2006
 authors: ["Geoffrey E. Hinton", "Ruslan R. Salakhutdinov"]
 affiliation: "University of Toronto, Department of Computer Science"
@@ -14,7 +14,7 @@ keywords: []
 zh_version: "/era1_foundations/2006_autoencoder/"
 ---
 
-# Reducing the Dimensionality of Data with Neural Networks
+# Autoencoder — RBM Pretraining Wakes Neural Networks From Cold Storage
 
 ---
 

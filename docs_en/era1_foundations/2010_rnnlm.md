@@ -1,5 +1,5 @@
 ---
-title: "Recurrent neural network based language model"
+title: "RNN-LM — Moving Language Modeling from Fixed Windows to Recurrent State"
 year: 2010
 authors: ["Tomas Mikolov", "Martin Karafiat", "Lukas Burget", "Jan Cernocky", "Sanjeev Khudanpur"]
 affiliation: "Brno University of Technology / Johns Hopkins University"
@@ -14,7 +14,7 @@ paper: "https://www.isca-archive.org/interspeech_2010/mikolov10_interspeech.html
 zh_version: "/era1_foundations/2010_rnnlm/"
 ---
 
-# RNN-LM - Moving Language Modeling from Fixed Windows to Recurrent State
+# RNN-LM — Moving Language Modeling from Fixed Windows to Recurrent State
 
 > **In September 2010, Tomas Mikolov, Martin Karafiat, Lukas Burget, Jan Cernocky, and Sanjeev Khudanpur published the four-page Interspeech paper [_Recurrent neural network based language model_](https://www.isca-archive.org/interspeech_2010/mikolov10_interspeech.html).** On the surface it was a small engineering paper: replace a backoff n-gram table with a recurrent neural network and use it for speech-recognition rescoring. The official abstract, however, carried three numbers that were hard to ignore: about **50% perplexity reduction** with mixtures of RNN LMs over a state-of-the-art backoff LM, about **18% word-error-rate reduction** on WSJ when trained on the same data, and about **5% WER reduction** on the much harder NIST RT05 task even against a backoff model trained on more data. Its historical role is larger than “RNNs can model text”: it moved language modeling from fixed-window statistics into continuous hidden state, then grew into the RNNLM toolkit, Word2Vec, Seq2Seq decoders, LSTM language models, ELMo, and finally the autoregressive objective inherited by Transformer LMs.
 

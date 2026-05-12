@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+Sitemap: https://awesome.papernotes.org/sitemap.xml
+Sitemap: https://awesome.papernotes.org/en/sitemap.xml

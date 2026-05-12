@@ -4,10 +4,15 @@
 
 **English** | [中文](README.md)
 
-**Sites**:
 
-- English site: <https://awesome.papernotes.org/en/>
-- Chinese site: <https://awesome.papernotes.org/>
+## 🌐 Read online
+
+- English site: **<https://awesome.papernotes.org/en/>**
+- Chinese site: **<https://awesome.papernotes.org/>**
+
+> 💡 **Tip**: If math formulas don't render correctly, refreshing the page usually fixes it.
+
+## 📊 Coverage
 
 | Era | Time range | Representative works | Notes |
 |------|----------|----------|--------|
@@ -17,9 +22,8 @@
 | Era 4 · Foundation Models | 2020-2022 | GPT-3 / DDPM / ViT / CLIP / AlphaFold2 / Stable Diffusion / CoT | 35 |
 | Era 5 · Large Model Era | 2023-present | LLaMA / SAM / DPO / Mamba / Sora / o1 / DeepSeek-R1 | 28 |
 
----
 
-## All notes (grouped by era)
+## 📖 All notes (grouped by era)
 
 ### 1 · Foundations (1957-2011)
 
@@ -30,15 +34,15 @@
 - **1997** · [LSTM — How Gating Made Recurrent Networks Remember Long Dependencies for the First Time](docs_en/era1_foundations/1997_lstm.md)
 - **1998** · [LeNet — Stitching Convolution, Pooling and Backprop into the First Industrial-Grade Deep Network](docs_en/era1_foundations/1998_lenet.md)
 - **2001** · [Random Forests — Bagging + Feature Sampling that Crowned Decision Trees on the ML Throne](docs_en/era1_foundations/2001_random_forests.md)
-- **2003** · [Latent Dirichlet Allocation](docs_en/era1_foundations/2003_lda.md)
+- **2003** · [LDA — Promoting pLSA to a Generalizable Fully-Bayesian Topic Model with a Dirichlet Prior](docs_en/era1_foundations/2003_lda.md)
 - **2006** · [DBN — How Layer-wise Greedy Pretraining Made Deep Networks Trainable for the First Time](docs_en/era1_foundations/2006_dbn.md)
-- **2006** · [Reducing the Dimensionality of Data with Neural Networks](docs_en/era1_foundations/2006_autoencoder.md)
-- **2008** · [Visualizing Data using t-SNE](docs_en/era1_foundations/2008_tsne.md)
+- **2006** · [Autoencoder — RBM Pretraining Wakes Neural Networks From Cold Storage](docs_en/era1_foundations/2006_autoencoder.md)
+- **2008** · [t-SNE — The Visual Language of High-Dimensional Data Visualization](docs_en/era1_foundations/2008_tsne.md)
 - **2009** · [ImageNet — How 15M Images Turned a 'Dataset' into the Fuse of the Deep Learning Revolution](docs_en/era1_foundations/2009_imagenet.md)
-- **2010** · [RNN-LM - Moving Language Modeling from Fixed Windows to Recurrent State](docs_en/era1_foundations/2010_rnnlm.md)
+- **2010** · [RNN-LM — Moving Language Modeling from Fixed Windows to Recurrent State](docs_en/era1_foundations/2010_rnnlm.md)
 - **2010** · [Stacked Denoising Autoencoders — Turning Local Denoising into Deep Representation Pretraining](docs_en/era1_foundations/2010_stacked_dae.md)
-- **2010** · [Understanding the difficulty of training deep feedforward neural networks](docs_en/era1_foundations/2010_glorot_init.md)
-- **2011** · [Deep Sparse Rectifier Neural Networks](docs_en/era1_foundations/2011_relu.md)
+- **2010** · [Glorot Init — Making Deep Networks Pass Signals Before They Learn](docs_en/era1_foundations/2010_glorot_init.md)
+- **2011** · [ReLU — How max(0, x) Turned Deep Networks from "Lab Toy" to "Industrial Cornerstone"](docs_en/era1_foundations/2011_relu.md)
 
 ### 2 · Deep Renaissance (2012-2016)
 
@@ -170,9 +174,8 @@
 - **2025** · [DeepSeek-R1 — How Pure Reinforcement Learning Taught an Open LLM to Reason](docs_en/era5_genai_explosion/2025_deepseek_r1.md)
 - **2025** · [Qwen2.5 / Qwen3 - How Alibaba Turned Open LLMs into a Full-Stack Model Family](docs_en/era5_genai_explosion/2025_qwen3.md)
 
----
 
-## Repository layout
+## 📂 Repository layout
 
 ```
 awesome-papers/
@@ -206,8 +209,6 @@ awesome-papers/
 └── shared/<slug>/lineage.mmd             # Mermaid citation-graph sources shared by zh/en notes
 ```
 
----
-
-## License
+## 📄 License
 
 CC-BY-NC 4.0

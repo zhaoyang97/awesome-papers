@@ -225,15 +225,15 @@ nav:
       - "2012 · Dropout — Randomly Turning Neurons Off to Stop Feature Co-adaptation": era2_deep_renaissance/2012_dropout.md
   - "Era 1 · Foundations (1957-2011)":
       - era1_foundations/index.md
-      - "2011 · Deep Sparse Rectifier Neural Networks": era1_foundations/2011_relu.md
-      - "2010 · RNN-LM - Moving Language Modeling from Fixed Windows to Recurrent State": era1_foundations/2010_rnnlm.md
+      - "2011 · ReLU — How max(0, x) Turned Deep Networks from 'Lab Toy' to 'Industrial Cornerstone'": era1_foundations/2011_relu.md
+      - "2010 · RNN-LM — Moving Language Modeling from Fixed Windows to Recurrent State": era1_foundations/2010_rnnlm.md
       - "2010 · Stacked Denoising Autoencoders — Turning Local Denoising into Deep Representation Pretraining": era1_foundations/2010_stacked_dae.md
-      - "2010 · Understanding the difficulty of training deep feedforward neural networks": era1_foundations/2010_glorot_init.md
+      - "2010 · Glorot Init — Making Deep Networks Pass Signals Before They Learn": era1_foundations/2010_glorot_init.md
       - "2009 · ImageNet — How 15M Images Turned a 'Dataset' into the Fuse of the Deep Learning Revolution": era1_foundations/2009_imagenet.md
-      - "2008 · Visualizing Data using t-SNE": era1_foundations/2008_tsne.md
+      - "2008 · t-SNE — The Visual Language of High-Dimensional Data Visualization": era1_foundations/2008_tsne.md
       - "2006 · DBN — How Layer-wise Greedy Pretraining Made Deep Networks Trainable for the First Time": era1_foundations/2006_dbn.md
-      - "2006 · Reducing the Dimensionality of Data with Neural Networks": era1_foundations/2006_autoencoder.md
-      - "2003 · Latent Dirichlet Allocation": era1_foundations/2003_lda.md
+      - "2006 · Autoencoder — RBM Pretraining Wakes Neural Networks From Cold Storage": era1_foundations/2006_autoencoder.md
+      - "2003 · LDA — Promoting pLSA to a Generalizable Fully-Bayesian Topic Model with a Dirichlet Prior": era1_foundations/2003_lda.md
       - "2001 · Random Forests — Bagging + Feature Sampling that Crowned Decision Trees on the ML Throne": era1_foundations/2001_random_forests.md
       - "1998 · LeNet — Stitching Convolution, Pooling and Backprop into the First Industrial-Grade Deep Network": era1_foundations/1998_lenet.md
       - "1997 · LSTM — How Gating Made Recurrent Networks Remember Long Dependencies for the First Time": era1_foundations/1997_lstm.md

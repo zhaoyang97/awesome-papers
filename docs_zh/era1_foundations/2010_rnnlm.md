@@ -1,5 +1,5 @@
 ---
-title: "Recurrent neural network based language model"
+title: "RNN-LM — 把语言模型从固定窗口带进连续隐状态"
 year: 2010
 authors: ["Tomas Mikolov", "Martin Karafiat", "Lukas Burget", "Jan Cernocky", "Sanjeev Khudanpur"]
 affiliation: "Brno University of Technology / Johns Hopkins University"
@@ -14,7 +14,7 @@ paper: "https://www.isca-archive.org/interspeech_2010/mikolov10_interspeech.html
 en_version: "/en/era1_foundations/2010_rnnlm/"
 ---
 
-# RNN-LM - 把语言模型从固定窗口带进连续隐状态
+# RNN-LM — 把语言模型从固定窗口带进连续隐状态
 
 > **2010 年 9 月，Tomas Mikolov、Martin Karafiat、Lukas Burget、Jan Cernocky、Sanjeev Khudanpur 五位作者在 [Interspeech 2010](https://www.isca-archive.org/interspeech_2010/mikolov10_interspeech.html) 发表 4 页论文 _Recurrent neural network based language model_。** 它看起来只是把语言模型从 n-gram 换成一个小 RNN，却在官方摘要里给出三个足够刺眼的数字：RNN-LM 混合模型相对强 backoff LM 约 **50% perplexity reduction**，WSJ 任务约 **18% WER reduction**，更难的 NIST RT05 仍有约 **5% WER reduction**。这篇论文的真正历史位置不只是“RNN 能做 LM”，而是把语言建模从固定窗口统计表推向连续隐状态，随后一路长成 RNNLM toolkit、Word2Vec、Seq2Seq、LSTM LM、ELMo，以及最后被 Transformer 接管的自回归大语言模型。
 
