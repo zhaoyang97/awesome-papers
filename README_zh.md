@@ -1,17 +1,13 @@
 # Awesome AI Papers
 
 > 给 100 篇真正改变 AI 历史的经典论文写"传记"的**中英双语**深度解读项目。
->
-> Distill 风格的深度 × 维基百科的体系 × 中文母语写作 + 英文母语镜像 × LLM 驱动可规模化。
 
 [English](README.md) | **中文**
 
 **站点**：
 
-- 🇨🇳 中文站：<https://awesome.papernotes.org/>
-- 🇬🇧 English site: <https://awesome.papernotes.org/en/>
-
-**进度**：当前 **134** 篇深度笔记，覆盖 5 个时代（1958 → 2025）。
+- 中文站：<https://awesome.papernotes.org/>
+- English site: <https://awesome.papernotes.org/en/>
 
 | 时代 | 时间范围 | 主题代表 | 收录数 |
 |------|----------|----------|--------|
@@ -23,26 +19,7 @@
 
 ---
 
-## 8-section 深度模板
-
-每篇 deep note 必须包含：
-
-1. **历史背景** — 为什么这篇 paper 在那个时间点出现？当时学界在卡什么？
-2. **研究背景与动机**
-3. **方法详解** — 含原始公式 + 现代复现代码 + 详细对比表
-4. **失败案例** — 当时哪些 baseline 输了？为什么？（绝大多数解读跳过这部分）
-5. **实验关键数据**
-6. **思想史脉络** — 必含 Mermaid 引用图（前世 → 本文 → 今生 → 误读）
-7. **当代视角** — 站在 N 年后回看，哪些假设站不住了？
-8. **局限 / 相关工作 / 资源链接**
-
-> ⚠️ **不给顶级论文打分**。能入选 Top 100 本身就是最大的肯定，frontmatter 不包含 awesome_score 字段。
-
----
-
 ## 全部笔记（按时代分组）
-
-> 在 GitHub 上点击篇目可直接查看对应中文 markdown；网页版（含目录、Mermaid 渲染、深色模式）请访问 <https://awesome.papernotes.org/>。
 
 ### 1 · 神经网络萌芽 (1957-2011)
 
