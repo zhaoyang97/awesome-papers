@@ -4,157 +4,235 @@ hide:
   - toc
 ---
 
-# Awesome AI Papers
+<div class="home-page" markdown="1">
 
-<p style="font-size: 1.1em; color: var(--md-default-fg-color--light);">
-  Every landmark paper in AI history deserves a biography — its context, failures, legacy, and modern perspective.
+## 🗺️ 70 years of ideas, one diagram first
+
+```mermaid
+graph LR
+  Per[1958 Perceptron] --> BP[1986 Backprop]
+  BP --> LSTM[1997 LSTM]
+  BP --> LeNet[1998 LeNet]
+  LeNet --> Alex[2012 AlexNet]
+  IN[2009 ImageNet] --> Alex
+  Alex --> Res[2015 ResNet]
+
+  LSTM --> S2S[2014 Seq2Seq]
+  W2V[2013 Word2Vec] -.-> S2S
+  S2S --> Att[2014 Attention]
+  Res --> Tr[2017 Transformer]
+  Att --> Tr
+
+  Res --> UNet[2015 U-Net]
+  VAE[2013 VAE] --> DDPM[2020 DDPM]
+
+  DQN[2015 Nature DQN] --> AGo[2016 AlphaGo]
+  AGo --> AZero[2017 AlphaZero]
+
+  Tr --> BERT[2018 BERT]
+  Tr --> GPT[2018 GPT-1]
+  Tr --> ViT[2020 ViT]
+  Res --> ViT
+
+  GPT --> G3[2020 GPT-3]
+  ViT --> CLIP[2021 CLIP]
+  CLIP --> SD[2022 SD]
+  DDPM --> SD
+  UNet --> SD
+
+  Tr --> AF2[2021 AlphaFold2]
+  G3 --> IGPT[2022 InstructGPT]
+  G3 --> CoT[2022 CoT]
+
+  GPT --> LLaMA[2023 LLaMA]
+  ViT --> SAM[2023 SAM]
+  CLIP --> SAM
+  Tr -.-> Mamba[2023 Mamba]
+  SD --> Sora[2024 Sora]
+  IGPT --> o1[2024 o1]
+  CoT -.-> o1
+  AZero -.-> o1
+  o1 --> R1[2025 DeepSeek-R1]
+
+  click Per "era1_foundations/1958_perceptron/" "Perceptron note"
+  click BP "era1_foundations/1986_backprop/" "Backprop note"
+  click LSTM "era1_foundations/1997_lstm/" "LSTM note"
+  click LeNet "era1_foundations/1998_lenet/" "LeNet note"
+  click IN "era1_foundations/2009_imagenet/" "ImageNet note"
+  click Alex "era2_deep_renaissance/2012_alexnet/" "AlexNet note"
+  click W2V "era2_deep_renaissance/2013_word2vec/" "Word2Vec note"
+  click VAE "era2_deep_renaissance/2013_vae/" "VAE note"
+  click S2S "era2_deep_renaissance/2014_seq2seq/" "Seq2Seq note"
+  click Att "era2_deep_renaissance/2014_attention/" "Bahdanau Attention note"
+  click Res "era2_deep_renaissance/2015_resnet/" "ResNet note"
+  click UNet "era2_deep_renaissance/2015_unet/" "U-Net note"
+  click DQN "era2_deep_renaissance/2015_dqn_nature/" "Nature DQN note"
+  click AGo "era2_deep_renaissance/2016_alphago/" "AlphaGo note"
+  click Tr "era3_attention/2017_transformer/" "Transformer note"
+  click AZero "era3_attention/2017_alphazero/" "AlphaZero note"
+  click BERT "era3_attention/2018_bert/" "BERT note"
+  click GPT "era3_attention/2018_gpt1/" "GPT-1 note"
+  click G3 "era4_foundation_models/2020_gpt3/" "GPT-3 note"
+  click ViT "era4_foundation_models/2020_vit/" "ViT note"
+  click DDPM "era4_foundation_models/2020_ddpm/" "DDPM note"
+  click CLIP "era4_foundation_models/2021_clip/" "CLIP note"
+  click AF2 "era4_foundation_models/2021_alphafold2/" "AlphaFold2 note"
+  click SD "era4_foundation_models/2022_stable_diffusion/" "Stable Diffusion note"
+  click IGPT "era4_foundation_models/2022_instructgpt/" "InstructGPT note"
+  click CoT "era4_foundation_models/2022_cot/" "CoT note"
+  click LLaMA "era5_genai_explosion/2023_llama/" "LLaMA note"
+  click SAM "era5_genai_explosion/2023_sam/" "SAM note"
+  click Mamba "era5_genai_explosion/2023_mamba/" "Mamba note"
+  click Sora "era5_genai_explosion/2024_sora/" "Sora note"
+  click o1 "era5_genai_explosion/2024_o1/" "o1 note"
+  click R1 "era5_genai_explosion/2025_deepseek_r1/" "DeepSeek-R1 note"
+```
+
+<p class="hero-fineprint">
+30 nodes across 6 mainlines: CNN · sequence modeling · reinforcement learning · generative models · multimodal · reasoning. <strong>Solid arrows</strong> mark direct inheritance; <strong>dashed arrows</strong> mark indirect influence or sibling branches. This is only a skeleton — click any node to open the full biography, where the "Idea Lineage" section unpacks the real ancestors, descendants, and misreadings.
 </p>
 
-## Era 5 · Large Model Era (2023-present) <small>28 notes</small>
+---
 
-- **2025** · [Claude 3.5/3.7 Sonnet - Turning Frontier Models into Controllable Engineering Collaborators](era5_genai_explosion/2025_claude_sonnet.md)
-- **2025** · [DeepSeek-R1 — How Pure Reinforcement Learning Taught an Open LLM to Reason](era5_genai_explosion/2025_deepseek_r1.md)
-- **2025** · [Qwen2.5 / Qwen3 - How Alibaba Turned Open LLMs into a Full-Stack Model Family](era5_genai_explosion/2025_qwen3.md)
-- **2024** · [DeepSeek-V2 / V3 - How MLA and MoE Pushed Open Models to the Frontier](era5_genai_explosion/2024_deepseek_v3.md)
-- **2024** · [Gemini 1.5 - Multimodal Understanding Across Million-Token Contexts](era5_genai_explosion/2024_gemini15.md)
-- **2024** · [Genie: Generative Interactive Environments](era5_genai_explosion/2024_genie.md)
-- **2024** · [Llama 3 Herd - An Engineering Blueprint for Open Frontier Models](era5_genai_explosion/2024_llama3.md)
-- **2024** · [Mamba-2 - When Transformers and SSMs Meet in the Same Algebra](era5_genai_explosion/2024_mamba2.md)
-- **2024** · [OpenAI o1 - Reinforcement Learning for Deep LLM Reasoning](era5_genai_explosion/2024_o1.md)
-- **2024** · [Sora Technical Report - Video Generation Models as World Simulators](era5_genai_explosion/2024_sora.md)
-- **2024** · [Stable Diffusion 3 / Rectified Flow — Moving Text-to-Image from U-Net Diffusion to Scalable MMDiT](era5_genai_explosion/2024_stable_diffusion3.md)
-- **2023** · [3DGS — Bringing NeRF-Quality Radiance Fields into Real-Time Interaction](era5_genai_explosion/2023_3dgs.md)
-- **2023** · [AudioLM - Turning Raw Audio into a Language Modeling Problem](era5_genai_explosion/2023_audiolm.md)
-- **2023** · [DINOv2 - Robust Visual Features without Supervision](era5_genai_explosion/2023_dinov2.md)
-- **2023** · [DPO — Aligning LLMs Directly from Preferences without a Reward Model or PPO](era5_genai_explosion/2023_dpo.md)
-- **2023** · [GPT-4 Technical Report - Capability Leap and the Black-Box Technical Report](era5_genai_explosion/2023_gpt4.md)
-- **2023** · [LLaMA — How Smaller Parameters + More Tokens Helped Open-Source LLMs Catch Up to GPT-3](era5_genai_explosion/2023_llama.md)
-- **2023** · [LLaVA - Turning GPT-4-Generated Visual Instructions into an Open Multimodal Assistant](era5_genai_explosion/2023_llava.md)
-- **2023** · [Llama 2: Open Foundation and Fine-Tuned Chat Models](era5_genai_explosion/2023_llama2.md)
-- **2023** · [Mamba — How Selective State Spaces Became the First Credible Transformer Challenger in a Decade](era5_genai_explosion/2023_mamba.md)
-- **2023** · [Mixtral 8x7B — Open-Weight LLMs Enter the Sparse Expert Era](era5_genai_explosion/2023_mixtral.md)
-- **2023** · [QLoRA — Bringing 65B LLM Fine-Tuning onto a Single 48GB GPU](era5_genai_explosion/2023_qlora.md)
-- **2023** · [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](era5_genai_explosion/2023_rt2.md)
-- **2023** · [RWKV - Reinventing RNNs for the Transformer Era](era5_genai_explosion/2023_rwkv.md)
-- **2023** · [SAM — One Prompt + 11M Images + 1B Masks: Turning Segmentation into a Foundation Model Problem](era5_genai_explosion/2023_sam.md)
-- **2023** · [Toolformer - Letting Language Models Teach Themselves When to Use Tools](era5_genai_explosion/2023_toolformer.md)
-- **2023** · [Tree of Thoughts — Deliberate Search as a Reasoning Interface for LLMs](era5_genai_explosion/2023_tot.md)
-- **2023** · [vLLM / PagedAttention — Rescuing LLM Serving from KV-Cache Fragmentation](era5_genai_explosion/2023_vllm.md)
+## 📅 Full 116-paper timeline {#timeline}
 
-## Era 4 · Foundation Models (2020-2022) <small>35 notes</small>
+=== "Era 5 · Large Model Era (2023–present)"
 
-- **2023** · [ControlNet — Plugging spatial control into frozen diffusion via zero-convolutions](era4_foundation_models/2022_controlnet.md)
-- **2022** · [Chinchilla — Proving All LLMs Were 'Undertrained' via Compute-Optimal Allocation](era4_foundation_models/2022_chinchilla.md)
-- **2022** · [Classifier-Free Diffusion Guidance — One Line of Code Removes the Bolt-On Classifier and Unifies Modern Text-to-Image](era4_foundation_models/2022_cfg.md)
-- **2022** · [CoT — Unlocking LLM Reasoning with 'Let's Think Step by Step'](era4_foundation_models/2022_cot.md)
-- **2022** · [Constitutional AI — Replacing Tens of Thousands of Human Harm Labels With a Constitution and AI Feedback](era4_foundation_models/2022_constitutional_ai.md)
-- **2022** · [ConvNeXt — Porting Every Swin Trick Back into a Pure ConvNet and Finding the CNN Decade Was Underrated](era4_foundation_models/2022_convnext.md)
-- **2022** · [DALL-E 2 - Rewriting Text-to-Image as CLIP-Latent Imagination plus Diffusion Rendering](era4_foundation_models/2022_dalle2.md)
-- **2022** · [DreamBooth — Implanting Any Subject Into a Text-to-Image Model With 3-5 Photos](era4_foundation_models/2022_dreambooth.md)
-- **2022** · [DreamFusion — Text-to-3D by Distilling a Frozen 2D Diffusion into a NeRF](era4_foundation_models/2022_dreamfusion.md)
-- **2022** · [Flamingo: a Visual Language Model for Few-Shot Learning](era4_foundation_models/2022_flamingo.md)
-- **2022** · [Imagen — Cascaded Text-to-Image Diffusion with Deep Language Understanding](era4_foundation_models/2022_imagen.md)
-- **2022** · [InstructGPT — Turning GPT-3 from a Continuator into an Obedient Assistant via RLHF](era4_foundation_models/2022_instructgpt.md)
-- **2022** · [MAE — Teaching ViT Self-Supervised Pretraining via 75% Masking](era4_foundation_models/2022_mae.md)
-- **2022** · [PaLM — Scaling Dense Language Models to 540B with Pathways](era4_foundation_models/2022_palm.md)
-- **2022** · [ReAct: Synergizing Reasoning and Acting in Language Models](era4_foundation_models/2022_react.md)
-- **2022** · [Stable Diffusion — Moving Diffusion into Latent Space so Consumer GPUs Can Generate Images](era4_foundation_models/2022_stable_diffusion.md)
-- **2022** · [Whisper - Turning 680k Hours of Weak Supervision into a General Speech Interface](era4_foundation_models/2022_whisper.md)
-- **2021** · [AlphaFold2 — Driving Protein Structure Prediction to Atomic Accuracy via Attention + Evoformer](era4_foundation_models/2021_alphafold2.md)
-- **2021** · [CLIP — Teaching Vision Models to Understand Language via 400M Image-Text Pairs](era4_foundation_models/2021_clip.md)
-- **2021** · [Codex — Evaluating Large Language Models Trained on Code](era4_foundation_models/2021_codex.md)
-- **2021** · [DALL-E — Recasting Text-to-Image Generation as Language Modeling](era4_foundation_models/2021_dalle.md)
-- **2021** · [LoRA — Slashing Large-Model Fine-tuning Cost by 99% via Low-Rank Matrices](era4_foundation_models/2021_lora.md)
-- **2021** · [Swin Transformer - Turning ViT into a General-Purpose Vision Backbone with Shifted Windows](era4_foundation_models/2021_swin_transformer.md)
-- **2020** · [DDPM — Crowning Diffusion as the King of Image Generation via Thousand-Step Denoising](era4_foundation_models/2020_ddpm.md)
-- **2020** · [DETR — Recasting Object Detection as Transformer Set Prediction](era4_foundation_models/2020_detr.md)
-- **2020** · [GPT-3 — When 175B Parameters Made Prompting the New Programming Paradigm](era4_foundation_models/2020_gpt3.md)
-- **2020** · [MoCo: Queues, Momentum Encoders, and the Moment Vision Self-Supervision Became Transferable](era4_foundation_models/2020_moco.md)
-- **2020** · [MuZero — Planning in Unknown Worlds with a Learned Model](era4_foundation_models/2020_muzero.md)
-- **2020** · [NeRF — Encoding a Scene into a Differentiable Radiance Field with One MLP](era4_foundation_models/2020_nerf.md)
-- **2020** · [Reformer — LSH and Reversible Layers for Million-Token Transformers](era4_foundation_models/2020_reformer.md)
-- **2020** · [Scaling Laws for Neural Language Models](era4_foundation_models/2020_scaling_laws.md)
-- **2020** · [Score SDE — Unifying Score-Based and Diffusion Models through Stochastic Differential Equations](era4_foundation_models/2020_score_sde.md)
-- **2020** · [SimCLR — A Plain Contrastive Loss That Crowned Self-Supervised Vision on ImageNet Linear Eval](era4_foundation_models/2020_simclr.md)
-- **2020** · [ViT — Dethroning Convolution from Vision with Pure Transformer](era4_foundation_models/2020_vit.md)
-- **2020** · [wav2vec 2.0 - Speech Recognition After 53k Hours of Listening and 10 Minutes of Labels](era4_foundation_models/2020_wav2vec2.md)
+    **28 papers** · [Era index →](era5_genai_explosion/index.md)
 
-## Era 3 · Attention Era (2017-2019) <small>24 notes</small>
+    - **2025** · [Claude 3.5/3.7 Sonnet - Turning Frontier Models into Controllable Engineering Collaborators](era5_genai_explosion/2025_claude_sonnet.md)
+    - **2025** · [DeepSeek-R1 — How Pure Reinforcement Learning Taught an Open LLM to Reason](era5_genai_explosion/2025_deepseek_r1.md)
+    - **2025** · [Qwen2.5 / Qwen3 - How Alibaba Turned Open LLMs into a Full-Stack Model Family](era5_genai_explosion/2025_qwen3.md)
+    - **2024** · [DeepSeek-V2 / V3 - How MLA and MoE Pushed Open Models to the Frontier](era5_genai_explosion/2024_deepseek_v3.md)
+    - **2024** · [Gemini 1.5 - Multimodal Understanding Across Million-Token Contexts](era5_genai_explosion/2024_gemini15.md)
+    - **2024** · [Genie: Generative Interactive Environments](era5_genai_explosion/2024_genie.md)
+    - **2024** · [Llama 3 Herd - An Engineering Blueprint for Open Frontier Models](era5_genai_explosion/2024_llama3.md)
+    - **2024** · [OpenAI o1 - Reinforcement Learning for Deep LLM Reasoning](era5_genai_explosion/2024_o1.md)
+    - **2024** · [Sora Technical Report - Video Generation Models as World Simulators](era5_genai_explosion/2024_sora.md)
+    - **2024** · [Stable Diffusion 3 / Rectified Flow — Moving Text-to-Image from U-Net Diffusion to Scalable MMDiT](era5_genai_explosion/2024_stable_diffusion3.md)
+    - **2023** · [3DGS — Bringing NeRF-Quality Radiance Fields into Real-Time Interaction](era5_genai_explosion/2023_3dgs.md)
+    - **2023** · [AudioLM - Turning Raw Audio into a Language Modeling Problem](era5_genai_explosion/2023_audiolm.md)
+    - **2023** · [DINOv2 - Robust Visual Features without Supervision](era5_genai_explosion/2023_dinov2.md)
+    - **2023** · [DPO — Aligning LLMs Directly from Preferences without a Reward Model or PPO](era5_genai_explosion/2023_dpo.md)
+    - **2023** · [GPT-4 Technical Report - Capability Leap and the Black-Box Technical Report](era5_genai_explosion/2023_gpt4.md)
+    - **2023** · [LLaMA — How Smaller Parameters + More Tokens Helped Open-Source LLMs Catch Up to GPT-3](era5_genai_explosion/2023_llama.md)
+    - **2023** · [LLaVA - Turning GPT-4-Generated Visual Instructions into an Open Multimodal Assistant](era5_genai_explosion/2023_llava.md)
+    - **2023** · [Llama 2: Open Foundation and Fine-Tuned Chat Models](era5_genai_explosion/2023_llama2.md)
+    - **2023** · [Mamba — How Selective State Spaces Became the First Credible Transformer Challenger in a Decade](era5_genai_explosion/2023_mamba.md)
+    - **2023** · [Mixtral 8x7B — Open-Weight LLMs Enter the Sparse Expert Era](era5_genai_explosion/2023_mixtral.md)
+    - **2023** · [QLoRA — Bringing 65B LLM Fine-Tuning onto a Single 48GB GPU](era5_genai_explosion/2023_qlora.md)
+    - **2023** · [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](era5_genai_explosion/2023_rt2.md)
+    - **2023** · [SAM — One Prompt + 11M Images + 1B Masks: Turning Segmentation into a Foundation Model Problem](era5_genai_explosion/2023_sam.md)
+    - **2023** · [Toolformer - Letting Language Models Teach Themselves When to Use Tools](era5_genai_explosion/2023_toolformer.md)
+    - **2023** · [Tree of Thoughts — Deliberate Search as a Reasoning Interface for LLMs](era5_genai_explosion/2023_tot.md)
+    - **2023** · [vLLM / PagedAttention — Rescuing LLM Serving from KV-Cache Fragmentation](era5_genai_explosion/2023_vllm.md)
 
-- **2019** · [EfficientNet — Redefining CNN Efficiency via Compound Scaling](era3_attention/2019_efficientnet.md)
-- **2019** · [GPT-2 — Announcing the LLM Era with Scale and Zero-shot](era3_attention/2019_gpt2.md)
-- **2019** · [RoBERTa — The Engineering Audit That Re-trained BERT Properly](era3_attention/2019_roberta.md)
-- **2019** · [Sentence-BERT — Turning BERT into a Sentence Embedding Engine](era3_attention/2019_sentence_bert.md)
-- **2019** · [T5 — Unifying All NLP Tasks as Text-to-Text](era3_attention/2019_t5.md)
-- **2018** · [BERT — Ushering NLP into the Pretraining Era via Masked Language Modeling](era3_attention/2018_bert.md)
-- **2018** · [ELMo — Bringing Contextual Embeddings Mainstream via BiLSTM Bidirectional LMs](era3_attention/2018_elmo.md)
-- **2018** · [GPT-1 — Igniting the Pre-training Revolution with Decoder-only Transformer](era3_attention/2018_gpt1.md)
-- **2018** · [Graph Attention Networks (GAT) — Attention as a Learnable Graph Edge](era3_attention/2018_gat.md)
-- **2018** · [Group Normalization - Freeing Normalization from Batch Size](era3_attention/2018_group_norm.md)
-- **2018** · [PGD Adversarial Training — Robustness as Min-Max Optimization](era3_attention/2018_pgd.md)
-- **2018** · [SE-Net — Channel Attention Crowning the ILSVRC 2017 Champion](era3_attention/2018_senet.md)
-- **2018** · [StyleGAN — Pushing GAN to Photorealistic Face Generation via Style Modulation](era3_attention/2018_stylegan.md)
-- **2018** · [ULMFiT — Making Language Model Fine-tuning Work](era3_attention/2018_ulmfit.md)
-- **2017** · [AlphaZero — Erasing Human Go Knowledge from RL via Pure Self-Play](era3_attention/2017_alphazero.md)
-- **2017** · [Capsule Networks — Routing Parts into Wholes](era3_attention/2017_capsule_networks.md)
-- **2017** · [CycleGAN — Unlocking Unpaired Image Translation via Cycle Consistency Loss](era3_attention/2017_cyclegan.md)
-- **2017** · [GCN — Founding Semi-supervised Node Classification and Graph Neural Networks](era3_attention/2017_gcn.md)
-- **2017** · [Mask R-CNN — Unifying Instance Segmentation by Adding One Branch to Faster R-CNN](era3_attention/2017_mask_rcnn.md)
-- **2017** · [MobileNet — Bringing Deep Learning to Mobile Devices via Depthwise Separable Convolutions](era3_attention/2017_mobilenet.md)
-- **2017** · [PPO — How Clipping Finally Made Policy Gradient Tunable and Usable](era3_attention/2017_ppo.md)
-- **2017** · [PointNet — Permutation-Invariant Deep Networks for Unordered Point Clouds](era3_attention/2017_pointnet.md)
-- **2017** · [Transformer — Burying Recurrence with Attention](era3_attention/2017_transformer.md)
-- **2017** · [WGAN — Curing GAN Training Instability with Wasserstein Distance](era3_attention/2017_wgan.md)
+=== "Era 4 · Foundation Models (2020–2022)"
 
-## Era 2 · Deep Renaissance (2012-2016) <small>31 notes</small>
+    **30 papers** · [Era index →](era4_foundation_models/index.md)
 
-- **2016** · [A3C - Asynchronous Actors as the Stabilizer for Deep Reinforcement Learning](era2_deep_renaissance/2016_a3c.md)
-- **2016** · [AlphaGo — Defeating the Human Go World Champion with MCTS + Deep Networks](era2_deep_renaissance/2016_alphago.md)
-- **2016** · [DenseNet - Feature Reuse as a Network Architecture](era2_deep_renaissance/2016_densenet.md)
-- **2016** · [LayerNorm: Normalization Without a Batch](era2_deep_renaissance/2016_layer_norm.md)
-- **2016** · [WaveNet - The Neural Starting Point for Raw-Waveform Generation](era2_deep_renaissance/2016_wavenet.md)
-- **2016** · [YOLO — Turning Object Detection into a Single Real-Time Regression](era2_deep_renaissance/2016_yolo.md)
-- **2015** · [BatchNorm — Turning Training Stability into a Layer](era2_deep_renaissance/2015_batchnorm.md)
-- **2015** · [FCN - Turning Classification Networks into Pixel-Level Segmenters](era2_deep_renaissance/2015_fcn.md)
-- **2015** · [Faster R-CNN — Learning Region Proposals Inside the Detector](era2_deep_renaissance/2015_faster_rcnn.md)
-- **2015** · [He Init - The Starting Point That Kept ReLU Networks Alive](era2_deep_renaissance/2015_he_init.md)
-- **2015** · [Inception / GoogLeNet — Making CNNs Deeper by Making Them Wider](era2_deep_renaissance/2015_inception.md)
-- **2015** · [Knowledge Distillation — Pouring a Large Model's Dark Knowledge into a Small One](era2_deep_renaissance/2015_knowledge_distillation.md)
-- **2015** · [Nature DQN - The Atari Moment That Made Deep Reinforcement Learning Public](era2_deep_renaissance/2015_dqn_nature.md)
-- **2015** · [ResNet — How Deep Residual Learning Unlocked the 152-Layer Door](era2_deep_renaissance/2015_resnet.md)
-- **2015** · [Spatial Transformer Networks — Letting CNNs Learn to Crop, Align, and Warp](era2_deep_renaissance/2015_spatial_transformer.md)
-- **2015** · [U-Net — Turning Encoder-Decoders and Skip Connections into the Default Grammar of Medical Segmentation](era2_deep_renaissance/2015_unet.md)
-- **2014** · [Adam — Adaptive Moments for Stochastic Optimization](era2_deep_renaissance/2014_adam.md)
-- **2014** · [Adversarial Examples — Linearity, FGSM, and the Beginning of Modern Robustness](era2_deep_renaissance/2014_adversarial_examples.md)
-- **2014** · [Bahdanau Attention — Teaching Neural MT Where to Look](era2_deep_renaissance/2014_attention.md)
-- **2014** · [GAN — Adversarial Games that Taught Neural Networks to Forge](era2_deep_renaissance/2014_gan.md)
-- **2014** · [GloVe - The Global Co-occurrence Bridge for Word Vectors](era2_deep_renaissance/2014_glove.md)
-- **2014** · [Network In Network — Putting a Tiny MLP Inside Every Convolution](era2_deep_renaissance/2014_network_in_network.md)
-- **2014** · [R-CNN — The ImageNet Feature Hierarchy That Rebooted Detection](era2_deep_renaissance/2014_rcnn.md)
-- **2014** · [Seq2Seq - Compress Any Sequence into a Vector, Then Decode It Back](era2_deep_renaissance/2014_seq2seq.md)
-- **2014** · [VGG — Pushing CNNs to 19 Layers with 3×3 Convolutions](era2_deep_renaissance/2014_vgg.md)
-- **2013** · [DQN — The First Deep RL Agent to Learn Atari from Pixels](era2_deep_renaissance/2013_dqn.md)
-- **2013** · [VAE — Turning Generative Modeling into a Tractable Variational Bound](era2_deep_renaissance/2013_vae.md)
-- **2013** · [Word2Vec - The Industrial Shortcut that Put Meaning into Vectors](era2_deep_renaissance/2013_word2vec.md)
-- **2013** · [ZFNet — Visualizing the Black Box That AlexNet Opened](era2_deep_renaissance/2013_zfnet.md)
-- **2012** · [AlexNet — Halving ImageNet Top-5 Error with GPU + ReLU + Dropout](era2_deep_renaissance/2012_alexnet.md)
-- **2012** · [Dropout — Randomly Turning Neurons Off to Stop Feature Co-adaptation](era2_deep_renaissance/2012_dropout.md)
+    - **2023** · [ControlNet — Plugging spatial control into frozen diffusion via zero-convolutions](era4_foundation_models/2022_controlnet.md)
+    - **2022** · [Chinchilla — Proving All LLMs Were 'Undertrained' via Compute-Optimal Allocation](era4_foundation_models/2022_chinchilla.md)
+    - **2022** · [Classifier-Free Diffusion Guidance — One Line of Code Removes the Bolt-On Classifier and Unifies Modern Text-to-Image](era4_foundation_models/2022_cfg.md)
+    - **2022** · [CoT — Unlocking LLM Reasoning with 'Let's Think Step by Step'](era4_foundation_models/2022_cot.md)
+    - **2022** · [Constitutional AI — Replacing Tens of Thousands of Human Harm Labels With a Constitution and AI Feedback](era4_foundation_models/2022_constitutional_ai.md)
+    - **2022** · [DreamBooth — Implanting Any Subject Into a Text-to-Image Model With 3-5 Photos](era4_foundation_models/2022_dreambooth.md)
+    - **2022** · [Flamingo: a Visual Language Model for Few-Shot Learning](era4_foundation_models/2022_flamingo.md)
+    - **2022** · [Imagen — Cascaded Text-to-Image Diffusion with Deep Language Understanding](era4_foundation_models/2022_imagen.md)
+    - **2022** · [InstructGPT — Turning GPT-3 from a Continuator into an Obedient Assistant via RLHF](era4_foundation_models/2022_instructgpt.md)
+    - **2022** · [MAE — Teaching ViT Self-Supervised Pretraining via 75% Masking](era4_foundation_models/2022_mae.md)
+    - **2022** · [PaLM — Scaling Dense Language Models to 540B with Pathways](era4_foundation_models/2022_palm.md)
+    - **2022** · [ReAct: Synergizing Reasoning and Acting in Language Models](era4_foundation_models/2022_react.md)
+    - **2022** · [Stable Diffusion — Moving Diffusion into Latent Space so Consumer GPUs Can Generate Images](era4_foundation_models/2022_stable_diffusion.md)
+    - **2022** · [Whisper - Turning 680k Hours of Weak Supervision into a General Speech Interface](era4_foundation_models/2022_whisper.md)
+    - **2021** · [AlphaFold2 — Driving Protein Structure Prediction to Atomic Accuracy via Attention + Evoformer](era4_foundation_models/2021_alphafold2.md)
+    - **2021** · [CLIP — Teaching Vision Models to Understand Language via 400M Image-Text Pairs](era4_foundation_models/2021_clip.md)
+    - **2021** · [Codex — Evaluating Large Language Models Trained on Code](era4_foundation_models/2021_codex.md)
+    - **2021** · [DALL-E — Recasting Text-to-Image Generation as Language Modeling](era4_foundation_models/2021_dalle.md)
+    - **2021** · [LoRA — Slashing Large-Model Fine-tuning Cost by 99% via Low-Rank Matrices](era4_foundation_models/2021_lora.md)
+    - **2021** · [Swin Transformer - Turning ViT into a General-Purpose Vision Backbone with Shifted Windows](era4_foundation_models/2021_swin_transformer.md)
+    - **2020** · [DDPM — Crowning Diffusion as the King of Image Generation via Thousand-Step Denoising](era4_foundation_models/2020_ddpm.md)
+    - **2020** · [DETR — Recasting Object Detection as Transformer Set Prediction](era4_foundation_models/2020_detr.md)
+    - **2020** · [GPT-3 — When 175B Parameters Made Prompting the New Programming Paradigm](era4_foundation_models/2020_gpt3.md)
+    - **2020** · [MoCo: Queues, Momentum Encoders, and the Moment Vision Self-Supervision Became Transferable](era4_foundation_models/2020_moco.md)
+    - **2020** · [NeRF — Encoding a Scene into a Differentiable Radiance Field with One MLP](era4_foundation_models/2020_nerf.md)
+    - **2020** · [Scaling Laws for Neural Language Models](era4_foundation_models/2020_scaling_laws.md)
+    - **2020** · [Score SDE — Unifying Score-Based and Diffusion Models through Stochastic Differential Equations](era4_foundation_models/2020_score_sde.md)
+    - **2020** · [SimCLR — A Plain Contrastive Loss That Crowned Self-Supervised Vision on ImageNet Linear Eval](era4_foundation_models/2020_simclr.md)
+    - **2020** · [ViT — Dethroning Convolution from Vision with Pure Transformer](era4_foundation_models/2020_vit.md)
+    - **2020** · [wav2vec 2.0 - Speech Recognition After 53k Hours of Listening and 10 Minutes of Labels](era4_foundation_models/2020_wav2vec2.md)
 
-## Era 1 · Foundations (1957-2011) <small>16 notes</small>
+=== "Era 3 · Attention Era (2017–2019)"
 
-- **2011** · [ReLU — How max(0, x) Turned Deep Networks from "Lab Toy" to "Industrial Cornerstone"](era1_foundations/2011_relu.md)
-- **2010** · [RNN-LM — Moving Language Modeling from Fixed Windows to Recurrent State](era1_foundations/2010_rnnlm.md)
-- **2010** · [Stacked Denoising Autoencoders — Turning Local Denoising into Deep Representation Pretraining](era1_foundations/2010_stacked_dae.md)
-- **2010** · [Glorot Init — Making Deep Networks Pass Signals Before They Learn](era1_foundations/2010_glorot_init.md)
-- **2009** · [ImageNet — How 15M Images Turned a 'Dataset' into the Fuse of the Deep Learning Revolution](era1_foundations/2009_imagenet.md)
-- **2008** · [t-SNE — The Visual Language of High-Dimensional Data Visualization](era1_foundations/2008_tsne.md)
-- **2006** · [DBN — How Layer-wise Greedy Pretraining Made Deep Networks Trainable for the First Time](era1_foundations/2006_dbn.md)
-- **2006** · [Autoencoder — RBM Pretraining Wakes Neural Networks From Cold Storage](era1_foundations/2006_autoencoder.md)
-- **2003** · [LDA — Promoting pLSA to a Generalizable Fully-Bayesian Topic Model with a Dirichlet Prior](era1_foundations/2003_lda.md)
-- **2001** · [Random Forests — Bagging + Feature Sampling that Crowned Decision Trees on the ML Throne](era1_foundations/2001_random_forests.md)
-- **1998** · [LeNet — Stitching Convolution, Pooling and Backprop into the First Industrial-Grade Deep Network](era1_foundations/1998_lenet.md)
-- **1997** · [LSTM — How Gating Made Recurrent Networks Remember Long Dependencies for the First Time](era1_foundations/1997_lstm.md)
-- **1992** · [SVM — How Max-Margin and the Kernel Trick Dominated Machine Learning for Two Decades](era1_foundations/1992_svm.md)
-- **1989** · [Universal Approximation — The Existence Theorem That Certified Neural Networks' Expressive Power](era1_foundations/1989_universal_approximation.md)
-- **1986** · [Backprop — Pulling Multi-layer Networks from 'Untrainable' into the Optimizable World via the Chain Rule](era1_foundations/1986_backprop.md)
-- **1958** · [Perceptron — How the First Hardware Neuron That Learns from Data Sparked AI as a Discipline](era1_foundations/1958_perceptron.md)
+    **20 papers** · [Era index →](era3_attention/index.md)
+
+    - **2019** · [EfficientNet — Redefining CNN Efficiency via Compound Scaling](era3_attention/2019_efficientnet.md)
+    - **2019** · [GPT-2 — Announcing the LLM Era with Scale and Zero-shot](era3_attention/2019_gpt2.md)
+    - **2019** · [RoBERTa — The Engineering Audit That Re-trained BERT Properly](era3_attention/2019_roberta.md)
+    - **2019** · [T5 — Unifying All NLP Tasks as Text-to-Text](era3_attention/2019_t5.md)
+    - **2018** · [BERT — Ushering NLP into the Pretraining Era via Masked Language Modeling](era3_attention/2018_bert.md)
+    - **2018** · [ELMo — Bringing Contextual Embeddings Mainstream via BiLSTM Bidirectional LMs](era3_attention/2018_elmo.md)
+    - **2018** · [GPT-1 — Igniting the Pre-training Revolution with Decoder-only Transformer](era3_attention/2018_gpt1.md)
+    - **2018** · [Graph Attention Networks (GAT) — Attention as a Learnable Graph Edge](era3_attention/2018_gat.md)
+    - **2018** · [Group Normalization - Freeing Normalization from Batch Size](era3_attention/2018_group_norm.md)
+    - **2018** · [PGD Adversarial Training — Robustness as Min-Max Optimization](era3_attention/2018_pgd.md)
+    - **2018** · [SE-Net — Channel Attention Crowning the ILSVRC 2017 Champion](era3_attention/2018_senet.md)
+    - **2018** · [StyleGAN — Pushing GAN to Photorealistic Face Generation via Style Modulation](era3_attention/2018_stylegan.md)
+    - **2017** · [AlphaZero — Erasing Human Go Knowledge from RL via Pure Self-Play](era3_attention/2017_alphazero.md)
+    - **2017** · [CycleGAN — Unlocking Unpaired Image Translation via Cycle Consistency Loss](era3_attention/2017_cyclegan.md)
+    - **2017** · [GCN — Founding Semi-supervised Node Classification and Graph Neural Networks](era3_attention/2017_gcn.md)
+    - **2017** · [Mask R-CNN — Unifying Instance Segmentation by Adding One Branch to Faster R-CNN](era3_attention/2017_mask_rcnn.md)
+    - **2017** · [MobileNet — Bringing Deep Learning to Mobile Devices via Depthwise Separable Convolutions](era3_attention/2017_mobilenet.md)
+    - **2017** · [PPO — How Clipping Finally Made Policy Gradient Tunable and Usable](era3_attention/2017_ppo.md)
+    - **2017** · [PointNet — Permutation-Invariant Deep Networks for Unordered Point Clouds](era3_attention/2017_pointnet.md)
+    - **2017** · [Transformer — Burying Recurrence with Attention](era3_attention/2017_transformer.md)
+
+=== "Era 2 · Deep Renaissance (2012–2016)"
+
+    **24 papers** · [Era index →](era2_deep_renaissance/index.md)
+
+    - **2016** · [AlphaGo — Defeating the Human Go World Champion with MCTS + Deep Networks](era2_deep_renaissance/2016_alphago.md)
+    - **2016** · [LayerNorm: Normalization Without a Batch](era2_deep_renaissance/2016_layer_norm.md)
+    - **2016** · [YOLO — Turning Object Detection into a Single Real-Time Regression](era2_deep_renaissance/2016_yolo.md)
+    - **2015** · [BatchNorm — Turning Training Stability into a Layer](era2_deep_renaissance/2015_batchnorm.md)
+    - **2015** · [FCN - Turning Classification Networks into Pixel-Level Segmenters](era2_deep_renaissance/2015_fcn.md)
+    - **2015** · [Faster R-CNN — Learning Region Proposals Inside the Detector](era2_deep_renaissance/2015_faster_rcnn.md)
+    - **2015** · [He Init - The Starting Point That Kept ReLU Networks Alive](era2_deep_renaissance/2015_he_init.md)
+    - **2015** · [Inception / GoogLeNet — Making CNNs Deeper by Making Them Wider](era2_deep_renaissance/2015_inception.md)
+    - **2015** · [Knowledge Distillation — Pouring a Large Model's Dark Knowledge into a Small One](era2_deep_renaissance/2015_knowledge_distillation.md)
+    - **2015** · [Nature DQN - The Atari Moment That Made Deep Reinforcement Learning Public](era2_deep_renaissance/2015_dqn_nature.md)
+    - **2015** · [ResNet — How Deep Residual Learning Unlocked the 152-Layer Door](era2_deep_renaissance/2015_resnet.md)
+    - **2015** · [U-Net — Turning Encoder-Decoders and Skip Connections into the Default Grammar of Medical Segmentation](era2_deep_renaissance/2015_unet.md)
+    - **2014** · [Adam — Adaptive Moments for Stochastic Optimization](era2_deep_renaissance/2014_adam.md)
+    - **2014** · [Adversarial Examples — Linearity, FGSM, and the Beginning of Modern Robustness](era2_deep_renaissance/2014_adversarial_examples.md)
+    - **2014** · [Bahdanau Attention — Teaching Neural MT Where to Look](era2_deep_renaissance/2014_attention.md)
+    - **2014** · [GAN — Adversarial Games that Taught Neural Networks to Forge](era2_deep_renaissance/2014_gan.md)
+    - **2014** · [R-CNN — The ImageNet Feature Hierarchy That Rebooted Detection](era2_deep_renaissance/2014_rcnn.md)
+    - **2014** · [Seq2Seq - Compress Any Sequence into a Vector, Then Decode It Back](era2_deep_renaissance/2014_seq2seq.md)
+    - **2014** · [VGG — Pushing CNNs to 19 Layers with 3×3 Convolutions](era2_deep_renaissance/2014_vgg.md)
+    - **2013** · [DQN — The First Deep RL Agent to Learn Atari from Pixels](era2_deep_renaissance/2013_dqn.md)
+    - **2013** · [VAE — Turning Generative Modeling into a Tractable Variational Bound](era2_deep_renaissance/2013_vae.md)
+    - **2013** · [Word2Vec - The Industrial Shortcut that Put Meaning into Vectors](era2_deep_renaissance/2013_word2vec.md)
+    - **2012** · [AlexNet — Halving ImageNet Top-5 Error with GPU + ReLU + Dropout](era2_deep_renaissance/2012_alexnet.md)
+    - **2012** · [Dropout — Randomly Turning Neurons Off to Stop Feature Co-adaptation](era2_deep_renaissance/2012_dropout.md)
+
+=== "Era 1 · Foundations (1957–2011)"
+
+    **14 papers** · [Era index →](era1_foundations/index.md)
+
+    - **2011** · [ReLU — How max(0, x) Turned Deep Networks from 'Lab Toy' to 'Industrial Cornerstone'](era1_foundations/2011_relu.md)
+    - **2010** · [Glorot Init — Making Deep Networks Pass Signals Before They Learn](era1_foundations/2010_glorot_init.md)
+    - **2009** · [ImageNet — How 15M Images Turned a 'Dataset' into the Fuse of the Deep Learning Revolution](era1_foundations/2009_imagenet.md)
+    - **2008** · [t-SNE — The Visual Language of High-Dimensional Data Visualization](era1_foundations/2008_tsne.md)
+    - **2006** · [DBN — How Layer-wise Greedy Pretraining Made Deep Networks Trainable for the First Time](era1_foundations/2006_dbn.md)
+    - **2006** · [Autoencoder — RBM Pretraining Wakes Neural Networks From Cold Storage](era1_foundations/2006_autoencoder.md)
+    - **2003** · [LDA — Promoting pLSA to a Generalizable Fully-Bayesian Topic Model with a Dirichlet Prior](era1_foundations/2003_lda.md)
+    - **2001** · [Random Forests — Bagging + Feature Sampling that Crowned Decision Trees on the ML Throne](era1_foundations/2001_random_forests.md)
+    - **1998** · [LeNet — Stitching Convolution, Pooling and Backprop into the First Industrial-Grade Deep Network](era1_foundations/1998_lenet.md)
+    - **1997** · [LSTM — How Gating Made Recurrent Networks Remember Long Dependencies for the First Time](era1_foundations/1997_lstm.md)
+    - **1992** · [SVM — How Max-Margin and the Kernel Trick Dominated Machine Learning for Two Decades](era1_foundations/1992_svm.md)
+    - **1989** · [Universal Approximation — The Existence Theorem That Certified Neural Networks' Expressive Power](era1_foundations/1989_universal_approximation.md)
+    - **1986** · [Backprop — Pulling Multi-layer Networks from 'Untrainable' into the Optimizable World via the Chain Rule](era1_foundations/1986_backprop.md)
+    - **1958** · [Perceptron — How the First Hardware Neuron That Learns from Data Sparked AI as a Discipline](era1_foundations/1958_perceptron.md)
+
+</div>

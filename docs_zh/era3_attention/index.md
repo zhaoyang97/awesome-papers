@@ -5,7 +5,6 @@
 ## 收录笔记
 
 - [AlphaZero — 用纯自对弈把人类围棋知识从 RL 中彻底删除](2017_alphazero.md) · 2017 · Silver et al.
-- [Capsule Networks — 用动态路由替换池化的视觉旧梦](2017_capsule_networks.md) · 2017 · Sabour, Frosst & Hinton
 - [CycleGAN — 用循环一致性损失打开无配对图像翻译大门](2017_cyclegan.md) · 2017 · Zhu et al.
 - [GCN — 半监督节点分类与图神经网络的奠基](2017_gcn.md) · 2017 · Kipf & Welling
 - [Mask R-CNN — 在 Faster R-CNN 上加一条分支统一了实例分割](2017_mask_rcnn.md) · 2017 · He et al.
@@ -13,7 +12,6 @@
 - [PointNet — 用置换不变深度网络直接处理无序点云](2017_pointnet.md) · 2017 · Qi et al.
 - [PPO — 用 clipping 让策略梯度终于变得「可调可用」](2017_ppo.md) · 2017 · Schulman et al.
 - [Transformer — 用注意力埋葬循环神经网络](2017_transformer.md) · 2017 · Vaswani et al.
-- [WGAN — 用 Wasserstein 距离根治 GAN 训练不稳定](2017_wgan.md) · 2017 · Arjovsky et al.
 - [BERT — 用掩码语言建模让 NLP 全面进入预训练时代](2018_bert.md) · 2018 · Devlin et al.
 - [ELMo — 用 BiLSTM 双向语言模型把 contextual embedding 推上主流](2018_elmo.md) · 2018 · Peters et al.
 - [Graph Attention Networks (GAT) — 为图神经网络植入注意力](2018_gat.md) · 2018 · Velickovic et al.
@@ -22,9 +20,7 @@
 - [PGD Adversarial Training — 把对抗鲁棒性写成最小最大问题](2018_pgd.md) · 2018 · Madry et al.
 - [SE-Net — 用 channel attention 把 ImageNet 终结者拱上 ILSVRC 2017 冠军](2018_senet.md) · 2018 · Hu et al.
 - [StyleGAN — 用 style modulation 把 GAN 推上照片级人脸生成](2018_stylegan.md) · 2018 · Karras et al.
-- [ULMFiT — 让 NLP 预训练微调真正可用](2018_ulmfit.md) · 2018 · Howard & Ruder
 - [EfficientNet — 用 compound scaling 重新定义 CNN 模型效率](2019_efficientnet.md) · 2019 · Tan & Le
 - [GPT-2 — 用规模与零样本宣告 LLM 时代的到来](2019_gpt2.md) · 2019 · Radford et al.
 - [RoBERTa — 把 BERT 重新训对的工程清醒剂](2019_roberta.md) · 2019 · Liu et al.
-- [Sentence-BERT — 把 BERT 变成可检索的句向量引擎](2019_sentence_bert.md) · 2019 · Reimers & Gurevych
 - [T5 — 把所有 NLP 任务统一成 text-to-text](2019_t5.md) · 2019 · Raffel et al.

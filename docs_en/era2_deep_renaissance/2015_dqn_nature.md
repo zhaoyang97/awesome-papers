@@ -505,7 +505,7 @@ Agent57 is the delayed answer to Nature DQN's failure table. It combines distrib
 
 - Paper: Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Andrei A. Rusu, Joel Veness, Marc G. Bellemare, Alex Graves, Martin Riedmiller, Andreas K. Fidjeland, Georg Ostrovski, Stig Petersen, Charles Beattie, Amir Sadik, Ioannis Antonoglou, Helen King, Dharshan Kumaran, Daan Wierstra, Shane Legg, Demis Hassabis, [*Human-level control through deep reinforcement learning*](https://doi.org/10.1038/nature14236), *Nature* 518, 529-533, 2015.
 - DeepMind DQN page and code: [sites.google.com/a/deepmind.com/dqn](https://sites.google.com/a/deepmind.com/dqn/).
-- Suggested reading path: [DQN 2013](2013_dqn.md) for the workshop prototype, [AlexNet](2012_alexnet.md) for CNN-on-pixels confidence, [AlphaGo](2016_alphago.md) for deep value functions inside search, Rainbow for DQN-family repairs, and [MuZero](../era4_foundation_models/2020_muzero.md) for planning without an externally supplied rule model.
+- Suggested reading path: [DQN 2013](2013_dqn.md) for the workshop prototype, [AlexNet](2012_alexnet.md) for CNN-on-pixels confidence, [AlphaGo](2016_alphago.md) for deep value functions inside search, Rainbow for DQN-family repairs, and MuZero for planning without an externally supplied rule model.
 
 The line to carry away is this: Nature DQN did not make the agent truly understand Atari, but it gave RL a system interface the deep-learning era could jointly debug. Replay buffer is memory, target network is a brake, CNN is perception, and Bellman target is self-generated supervision. Once those four pieces clicked together, deep RL became engineering reality rather than aspiration.
 

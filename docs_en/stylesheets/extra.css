@@ -1,5 +1,9 @@
-/* Hide the Material `(i)` indicator icon in the left nav (description tooltip). */
-.md-nav__link .md-nav__icon {
+/* Hide the Material `(i)` description-tooltip icon on LEAF nav links
+   (rendered as <a class="md-nav__link">), but keep the chevron icon on
+   collapsible section toggles (rendered as <label class="md-nav__link"
+   for="...">). Without this scoping, the chevron disappears and the
+   sidebar looks flat / non-collapsible even though it isn't. */
+.md-nav__link:not([for]) .md-nav__icon {
   display: none !important;
 }
 
@@ -10,4 +14,108 @@
 .md-nav__link .md-status,
 .md-nav__item .md-status {
   display: none !important;
+}
+
+
+/* ============================================================
+   Home page (index.md): hero, CTA buttons, lineage diagram,
+   disable auto-numbering of section headings. Triggered by
+   wrapping the home content in <div class="home-page">.
+   ============================================================ */
+
+/* Disable H2/H3 auto-numbering on the home page so section
+   labels like "🎯 6 篇..." don't render as "1. 🎯 6 篇..." */
+.md-content article.md-typeset .home-page > h2::before,
+.md-content article.md-typeset .home-page > h3::before {
+  content: none !important;
+  counter-increment: none !important;
+}
+.md-content article.md-typeset .home-page > h2,
+.md-content article.md-typeset .home-page > h3 {
+  counter-increment: none !important;
+}
+
+/* Hero H1 — bigger, friendlier */
+.home-page > h1 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  margin-top: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+@media screen and (max-width: 600px) {
+  .home-page > h1 {
+    font-size: 1.9rem;
+  }
+}
+
+/* Hero subtitle */
+.home-page .hero-tagline {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--md-default-fg-color--light);
+  max-width: 48em;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+/* CTA button row */
+.home-page .hero-cta {
+  margin: 1.2rem 0 2rem 0;
+}
+
+.home-page .hero-cta .md-button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Section H2 — slightly tighter spacing on home */
+.home-page > h2 {
+  margin-top: 2.4rem;
+  font-weight: 600;
+}
+
+/* Grid cards on home — subtle hover lift */
+.home-page .grid.cards > ul > li,
+.home-page .grid.cards > ol > li {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-page .grid.cards > ul > li:hover,
+.home-page .grid.cards > ol > li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px -8px var(--md-default-fg-color--lightest);
+}
+
+/* Card icons — make the leading :material-xxx: a hair larger */
+.home-page .grid.cards .lg.middle {
+  font-size: 1.6rem;
+  vertical-align: middle;
+  margin-right: 0.3em;
+}
+
+/* Lineage Mermaid container — center, max-width, room to breathe */
+.home-page .mermaid {
+  margin: 1.5rem auto;
+  text-align: center;
+  overflow-x: auto;
+}
+
+/* Fine-print note under the lineage diagram */
+.home-page .hero-fineprint {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Tabbed timeline — give a bit more breathing room around the
+   tab labels and the bullet lists they contain. */
+.home-page .tabbed-set {
+  margin-top: 1rem;
+}
+
+.home-page .tabbed-content ul {
+  margin-top: 0.5rem;
 }

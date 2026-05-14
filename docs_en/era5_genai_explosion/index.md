@@ -16,7 +16,6 @@
 - [Mixtral 8x7B — Open-Weight LLMs Enter the Sparse Expert Era](2023_mixtral.md) · 2023 · Mistral AI
 - [QLoRA — Bringing 65B LLM Fine-Tuning onto a Single 48GB GPU](2023_qlora.md) · 2023 · Dettmers et al.
 - [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](2023_rt2.md) · 2023 · Brohan et al.
-- [RWKV - Reinventing RNNs for the Transformer Era](2023_rwkv.md) · 2023 · Peng et al.
 - [SAM — One Prompt + 11M Images + 1B Masks: Turning Segmentation into a Foundation Model Problem](2023_sam.md) · 2023 · Kirillov et al.
 - [Toolformer - Letting Language Models Teach Themselves When to Use Tools](2023_toolformer.md) · 2023 · Schick et al.
 - [Tree of Thoughts — Deliberate Search as a Reasoning Interface for LLMs](2023_tot.md) · 2023 · Yao et al.
@@ -25,7 +24,6 @@
 - [Gemini 1.5 - Multimodal Understanding Across Million-Token Contexts](2024_gemini15.md) · 2024 · Google DeepMind
 - [Genie: Generative Interactive Environments](2024_genie.md) · 2024 · Bruce et al.
 - [Llama 3 Herd - An Engineering Blueprint for Open Frontier Models](2024_llama3.md) · 2024 · Meta AI
-- [Mamba-2 - When Transformers and SSMs Meet in the Same Algebra](2024_mamba2.md) · 2024 · Dao & Gu
 - [OpenAI o1 - Reinforcement Learning for Deep LLM Reasoning](2024_o1.md) · 2024 · OpenAI
 - [Sora Technical Report - Video Generation Models as World Simulators](2024_sora.md) · 2024 · OpenAI
 - [Stable Diffusion 3 / Rectified Flow — Moving Text-to-Image from U-Net Diffusion to Scalable MMDiT](2024_stable_diffusion3.md) · 2024 · Esser et al.

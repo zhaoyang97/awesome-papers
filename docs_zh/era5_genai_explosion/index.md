@@ -16,7 +16,6 @@
 - [Mixtral 8x7B — 把开源 LLM 带入稀疏专家时代](2023_mixtral.md) · 2023 · Mistral AI
 - [QLoRA — 让 65B 大模型微调落到单张 48GB GPU 上](2023_qlora.md) · 2023 · Dettmers 等
 - [RT-2：把网页知识迁移到机器人控制的视觉-语言-动作模型](2023_rt2.md) · 2023 · Brohan 等
-- [RWKV - 把 RNN 重新带回 Transformer 时代的线性大模型](2023_rwkv.md) · 2023 · Peng 等
 - [SAM — 一个 prompt + 11M 图像 + 1B 掩码，如何把分割变成基础模型问题](2023_sam.md) · 2023 · Kirillov 等
 - [Toolformer - 让语言模型自学何时调用工具](2023_toolformer.md) · 2023 · Schick 等
 - [Tree of Thoughts — 让大语言模型从一次性作答走向搜索式思考](2023_tot.md) · 2023 · Yao 等
@@ -25,7 +24,6 @@
 - [Gemini 1.5 - 百万 token 上下文的多模态长程理解](2024_gemini15.md) · 2024 · Google DeepMind
 - [Genie: 生成式交互环境](2024_genie.md) · 2024 · Bruce 等
 - [Llama 3 Herd - 开放权重前沿模型的工程化路线图](2024_llama3.md) · 2024 · Meta AI
-- [Mamba-2 - Transformer 与 SSM 原来共享同一套代数](2024_mamba2.md) · 2024 · Dao & Gu
 - [OpenAI o1 - 用强化学习把大模型推向深度推理](2024_o1.md) · 2024 · OpenAI
 - [Sora Technical Report - 把视频生成模型推向世界模拟器](2024_sora.md) · 2024 · OpenAI
 - [Stable Diffusion 3 / Rectified Flow — 把文生图从 U-Net 扩散推进到可缩放的 MMDiT](2024_stable_diffusion3.md) · 2024 · Esser 等
