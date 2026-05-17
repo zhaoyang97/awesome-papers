@@ -23,9 +23,6 @@ graph LR
   Res --> Tr[2017 Transformer]
   Att --> Tr
 
-  Res --> UNet[2015 U-Net]
-  VAE[2013 VAE] --> DDPM[2020 DDPM]
-
   DQN[2015 Nature DQN] --> AGo[2016 AlphaGo]
   AGo --> AZero[2017 AlphaZero]
 
@@ -36,9 +33,6 @@ graph LR
 
   GPT --> G3[2020 GPT-3]
   ViT --> CLIP[2021 CLIP]
-  CLIP --> SD[2022 SD]
-  DDPM --> SD
-  UNet --> SD
 
   Tr --> AF2[2021 AlphaFold2]
   G3 --> IGPT[2022 InstructGPT]
@@ -48,7 +42,6 @@ graph LR
   ViT --> SAM[2023 SAM]
   CLIP --> SAM
   Tr -.-> Mamba[2023 Mamba]
-  SD --> Sora[2024 Sora]
   IGPT --> o1[2024 o1]
   CoT -.-> o1
   AZero -.-> o1
@@ -61,11 +54,9 @@ graph LR
   click IN "era1_foundations/2009_imagenet/" "ImageNet 笔记"
   click Alex "era2_deep_renaissance/2012_alexnet/" "AlexNet 笔记"
   click W2V "era2_deep_renaissance/2013_word2vec/" "Word2Vec 笔记"
-  click VAE "era2_deep_renaissance/2013_vae/" "VAE 笔记"
   click S2S "era2_deep_renaissance/2014_seq2seq/" "Seq2Seq 笔记"
   click Att "era2_deep_renaissance/2014_attention/" "Bahdanau Attention 笔记"
   click Res "era2_deep_renaissance/2015_resnet/" "ResNet 笔记"
-  click UNet "era2_deep_renaissance/2015_unet/" "U-Net 笔记"
   click DQN "era2_deep_renaissance/2015_dqn_nature/" "Nature DQN 笔记"
   click AGo "era2_deep_renaissance/2016_alphago/" "AlphaGo 笔记"
   click Tr "era3_attention/2017_transformer/" "Transformer 笔记"
@@ -74,22 +65,19 @@ graph LR
   click GPT "era3_attention/2018_gpt1/" "GPT-1 笔记"
   click G3 "era4_foundation_models/2020_gpt3/" "GPT-3 笔记"
   click ViT "era4_foundation_models/2020_vit/" "ViT 笔记"
-  click DDPM "era4_foundation_models/2020_ddpm/" "DDPM 笔记"
   click CLIP "era4_foundation_models/2021_clip/" "CLIP 笔记"
   click AF2 "era4_foundation_models/2021_alphafold2/" "AlphaFold2 笔记"
-  click SD "era4_foundation_models/2022_stable_diffusion/" "Stable Diffusion 笔记"
   click IGPT "era4_foundation_models/2022_instructgpt/" "InstructGPT 笔记"
   click CoT "era4_foundation_models/2022_cot/" "CoT 笔记"
   click LLaMA "era5_genai_explosion/2023_llama/" "LLaMA 笔记"
   click SAM "era5_genai_explosion/2023_sam/" "SAM 笔记"
   click Mamba "era5_genai_explosion/2023_mamba/" "Mamba 笔记"
-  click Sora "era5_genai_explosion/2024_sora/" "Sora 笔记"
   click o1 "era5_genai_explosion/2024_o1/" "o1 笔记"
   click R1 "era5_genai_explosion/2025_deepseek_r1/" "DeepSeek-R1 笔记"
 ```
 
 <p class="hero-fineprint">
-30 个节点串起 6 条主线：CNN · 序列建模 · 强化学习 · 生成模型 · 多模态 · 推理。<strong>实线</strong>是直接继承，<strong>虚线</strong>是间接影响或思想分支。这只是一张极简骨架——点任意节点跳进对应深度笔记，里面的「思想史脉络」section 才有完整的前世/今生/误读。
+27 个节点串起 5 条主线：CNN · 序列建模 · 强化学习 · 多模态 · 推理。<strong>实线</strong>是直接继承，<strong>虚线</strong>是间接影响或思想分支。这只是一张极简骨架——点任意节点跳进对应深度笔记，里面的「思想史脉络」section 才有完整的前世/今生/误读。
 </p>
 
 ---

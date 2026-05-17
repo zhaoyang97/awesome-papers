@@ -23,9 +23,6 @@ graph LR
   Res --> Tr[2017 Transformer]
   Att --> Tr
 
-  Res --> UNet[2015 U-Net]
-  VAE[2013 VAE] --> DDPM[2020 DDPM]
-
   DQN[2015 Nature DQN] --> AGo[2016 AlphaGo]
   AGo --> AZero[2017 AlphaZero]
 
@@ -36,9 +33,6 @@ graph LR
 
   GPT --> G3[2020 GPT-3]
   ViT --> CLIP[2021 CLIP]
-  CLIP --> SD[2022 SD]
-  DDPM --> SD
-  UNet --> SD
 
   Tr --> AF2[2021 AlphaFold2]
   G3 --> IGPT[2022 InstructGPT]
@@ -48,7 +42,6 @@ graph LR
   ViT --> SAM[2023 SAM]
   CLIP --> SAM
   Tr -.-> Mamba[2023 Mamba]
-  SD --> Sora[2024 Sora]
   IGPT --> o1[2024 o1]
   CoT -.-> o1
   AZero -.-> o1
@@ -61,11 +54,9 @@ graph LR
   click IN "era1_foundations/2009_imagenet/" "ImageNet note"
   click Alex "era2_deep_renaissance/2012_alexnet/" "AlexNet note"
   click W2V "era2_deep_renaissance/2013_word2vec/" "Word2Vec note"
-  click VAE "era2_deep_renaissance/2013_vae/" "VAE note"
   click S2S "era2_deep_renaissance/2014_seq2seq/" "Seq2Seq note"
   click Att "era2_deep_renaissance/2014_attention/" "Bahdanau Attention note"
   click Res "era2_deep_renaissance/2015_resnet/" "ResNet note"
-  click UNet "era2_deep_renaissance/2015_unet/" "U-Net note"
   click DQN "era2_deep_renaissance/2015_dqn_nature/" "Nature DQN note"
   click AGo "era2_deep_renaissance/2016_alphago/" "AlphaGo note"
   click Tr "era3_attention/2017_transformer/" "Transformer note"
@@ -74,22 +65,19 @@ graph LR
   click GPT "era3_attention/2018_gpt1/" "GPT-1 note"
   click G3 "era4_foundation_models/2020_gpt3/" "GPT-3 note"
   click ViT "era4_foundation_models/2020_vit/" "ViT note"
-  click DDPM "era4_foundation_models/2020_ddpm/" "DDPM note"
   click CLIP "era4_foundation_models/2021_clip/" "CLIP note"
   click AF2 "era4_foundation_models/2021_alphafold2/" "AlphaFold2 note"
-  click SD "era4_foundation_models/2022_stable_diffusion/" "Stable Diffusion note"
   click IGPT "era4_foundation_models/2022_instructgpt/" "InstructGPT note"
   click CoT "era4_foundation_models/2022_cot/" "CoT note"
   click LLaMA "era5_genai_explosion/2023_llama/" "LLaMA note"
   click SAM "era5_genai_explosion/2023_sam/" "SAM note"
   click Mamba "era5_genai_explosion/2023_mamba/" "Mamba note"
-  click Sora "era5_genai_explosion/2024_sora/" "Sora note"
   click o1 "era5_genai_explosion/2024_o1/" "o1 note"
   click R1 "era5_genai_explosion/2025_deepseek_r1/" "DeepSeek-R1 note"
 ```
 
 <p class="hero-fineprint">
-30 nodes across 6 mainlines: CNN · sequence modeling · reinforcement learning · generative models · multimodal · reasoning. <strong>Solid arrows</strong> mark direct inheritance; <strong>dashed arrows</strong> mark indirect influence or sibling branches. This is only a skeleton — click any node to open the full biography, where the "Idea Lineage" section unpacks the real ancestors, descendants, and misreadings.
+27 nodes across 5 mainlines: CNN · sequence modeling · reinforcement learning · multimodal · reasoning. <strong>Solid arrows</strong> mark direct inheritance; <strong>dashed arrows</strong> mark indirect influence or sibling branches. This is only a skeleton — click any node to open the full biography, where the "Idea Lineage" section unpacks the real ancestors, descendants, and misreadings.
 </p>
 
 ---
