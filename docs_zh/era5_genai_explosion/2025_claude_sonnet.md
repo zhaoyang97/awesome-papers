@@ -1,10 +1,10 @@
 ---
-title: "Claude 3.5/3.7 Sonnet System Card"
+title: "Claude 3.5/3.7 Sonnet - 把前沿模型做成可控的工程同事"
 year: 2025
 authors: ["Anthropic"]
 affiliation: "Anthropic"
 conference: "Anthropic system card, model card addenda, and release notes (2024-2025)"
-citations_2605: 0
+citations_2609: 0
 era: "era5_genai_explosion"
 status: "v1"
 language: "zh"
@@ -19,7 +19,7 @@ en_version: "/en/era5_genai_explosion/2025_claude_sonnet/"
 
 ## 一句话总结
 
-Anthropic 在 2024-2025 年连续发布的 Claude 3.5/3.7 Sonnet system-card 系列，把“前沿模型论文”从可复现实验报告改写成**能力 + 接口 + 工具 + 安全阈值**的部署文档：可公开写成的核心抽象是 $p(y\mid x,B)=\sum_z p_\theta(y\mid x,z,B)p_\theta(z\mid x,B)$，其中 $B$ 是用户/API 可控的思考预算，$z$ 是 Claude 3.7 在 extended thinking 中显式展示的中间推理轨迹。它替代的失败 baseline 不是某个模型，而是 2024 年默认的“快答聊天模型 + prompt 诱导 CoT + 外部 agent scaffold”：6 月版 Claude 3.5 Sonnet 用 200K context、$3/$15 每百万 tokens 和内部 coding eval 64% 对比 Claude 3 Opus 38%，把 Sonnet 变成实用前沿档；10 月版把 SWE-bench Verified 从 33.4% 推到 49.0%，并公开 computer use；2025 年 3.7 则把同一模型做成可切换的混合推理系统，在 SWE-bench 子集 63.7% / 高算力 70.3%、prompt-injection 防护 88% 和 ASL-2 system card 之间建立一套产品化证据链。它与 [OpenAI o1](https://openai.com/index/openai-o1-system-card/) 的区别是可见、可控、统一模型；与 [DeepSeek-R1](2025_deepseek_r1.md) 的区别是少谈训练 recipe，多把推理模型写成能进企业代码库的治理对象。
+Anthropic 在 2024-2025 年连续发布的 Claude 3.5/3.7 Sonnet system-card 系列，把“前沿模型论文”从可复现实验报告改写成**能力 + 接口 + 工具 + 安全阈值**的部署文档：可公开写成的核心抽象是 $p(y\mid x,B)=\sum_z p_\theta(y\mid x,z,B)p_\theta(z\mid x,B)$，其中 $B$ 是用户/API 可控的思考预算，$z$ 是 Claude 3.7 在 extended thinking 中显式展示的中间推理轨迹。它替代的失败 baseline 不是某个模型，而是 2024 年默认的“快答聊天模型 + prompt 诱导 CoT + 外部 agent scaffold”：6 月版 Claude 3.5 Sonnet 用 200K context、$3/$15 每百万 tokens 和内部 coding eval 64% 对比 Claude 3 Opus 38%，把 Sonnet 变成实用前沿档；10 月版把 SWE-bench Verified 从 33.4% 推到 49.0%，并公开 computer use；2025 年 3.7 则把同一模型做成可切换的混合推理系统，在 SWE-bench 子集 63.7% / 高算力 70.3%、prompt-injection 防护 88% 和 ASL-2 system card 之间建立一套产品化证据链。它与 [OpenAI o1](https://openai.com/index/openai-o1-system-card/) 的区别是可见、可控、统一模型；与 [DeepSeek-R1](../2025_deepseek_r1/) 的区别是少谈训练 recipe，多把推理模型写成能进企业代码库的治理对象。
 
 ---
 
@@ -352,8 +352,8 @@ Claude 3.7 与 o1 共享“test-time compute 是能力轴”的判断，但产�
 ### 后续阅读
 
 - [OpenAI o1 System Card](https://openai.com/index/openai-o1-system-card/)：对比 hidden reasoning 和 test-time compute system card 的另一种写法。
-- [DeepSeek-R1](2025_deepseek_r1.md)：对比 open reasoning RL recipe 与闭源产品化 system card。
-- [Llama 3](2024_llama3.md)：对比开放权重前沿模型如何用论文/报告公开训练和评测。
+- [DeepSeek-R1](../2025_deepseek_r1/)：对比 open reasoning RL recipe 与闭源产品化 system card。
+- [Llama 3](../2024_llama3/)：对比开放权重前沿模型如何用论文/报告公开训练和评测。
 - [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)：理解 Claude 工具生态和 agent context 标准化。
 - [SWE-bench Verified](https://www.swebench.com/#verified)：理解 Sonnet coding benchmark 的任务形态和评测边界。
 

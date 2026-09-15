@@ -103,20 +103,33 @@ extra:
 nav:
   - 首页: index.md
   - "大模型时代 (2023-至今)":
+      - era5_genai_explosion/index.md
+      - "2026 · DeepSeek-V4：把百万 token 上下文从额度变成架构问题": era5_genai_explosion/2026_deepseek_v4.md
+      - "2026 · GPT-6 Astra：当高自主 Agent 首次跨过 Critical Cyber 门槛": era5_genai_explosion/2026_gpt6_astra.md
       - "2025 · Claude 3.5/3.7 Sonnet - 把前沿模型做成可控的工程同事": era5_genai_explosion/2025_claude_sonnet.md
       - "2025 · DeepSeek-R1 — 纯强化学习如何让开源 LLM 学会推理": era5_genai_explosion/2025_deepseek_r1.md
+      - "2025 · GPT-5：当模型选择变成系统能力": era5_genai_explosion/2025_gpt5.md
+      - "2025 · Gemini 2.5 - 当思考、多模态、长上下文与工具调用汇成一个模型族": era5_genai_explosion/2025_gemini25.md
+      - "2025 · Gemma 3 - 把多模态长上下文压进单张加速卡的开放权重模型族": era5_genai_explosion/2025_gemma3.md
+      - "2025 · Kimi K2 家族：从开放智能体到 3T 级前沿模型": era5_genai_explosion/2025_kimi_k2.md
+      - "2025 · Llama 4 - 原生多模态、稀疏专家与十百万上下文的开放权重实验": era5_genai_explosion/2025_llama4.md
       - "2025 · Qwen2.5 / Qwen3 - 阿里通义千问如何把开放模型做成全栈模型族": era5_genai_explosion/2025_qwen3.md
+      - "2024 · AlphaFold 3 — 用全原子扩散统一预测生物分子复合物": era5_genai_explosion/2024_alphafold3.md
       - "2024 · DeepSeek-V2 / V3 - MLA 与 MoE 如何把开源模型推到前沿": era5_genai_explosion/2024_deepseek_v3.md
+      - "2024 · GPT-4o：从三段式语音管线到 320 毫秒原生交互": era5_genai_explosion/2024_gpt4o.md
       - "2024 · Gemini 1.5 - 百万 token 上下文的多模态长程理解": era5_genai_explosion/2024_gemini15.md
       - "2024 · Genie: 生成式交互环境": era5_genai_explosion/2024_genie.md
       - "2024 · Llama 3 Herd - 开放权重前沿模型的工程化路线图": era5_genai_explosion/2024_llama3.md
-      - "2024 · OpenAI o1 - 用强化学习把大模型推向深度推理": era5_genai_explosion/2024_o1.md
+      - "2024 · OpenAI o1 -> o3/o4-mini - 推理模型从 test-time compute 走向 agent": era5_genai_explosion/2024_o1.md
+      - "2024 · Phi-4：把数据质量变成小模型推理能力的训练系统": era5_genai_explosion/2024_phi4.md
+      - "2024 · SWE-bench + SWE-agent — 当写代码从函数题变成真实仓库": era5_genai_explosion/2024_swe_bench.md
       - "2024 · Sora Technical Report - 把视频生成模型推向世界模拟器": era5_genai_explosion/2024_sora.md
       - "2024 · Stable Diffusion 3 / Rectified Flow — 把文生图从 U-Net 扩散推进到可缩放的 MMDiT": era5_genai_explosion/2024_stable_diffusion3.md
       - "2023 · 3DGS — 把 NeRF 从离线渲染带到实时交互的 3D Gaussian Splatting": era5_genai_explosion/2023_3dgs.md
       - "2023 · AudioLM - 把原始音频变成语言模型问题": era5_genai_explosion/2023_audiolm.md
       - "2023 · DINOv2 - 无监督视觉特征的通用底座": era5_genai_explosion/2023_dinov2.md
       - "2023 · DPO — 不要奖励模型也不要 PPO，直接用偏好数据对齐 LLM": era5_genai_explosion/2023_dpo.md
+      - "2023 · Diffusion Policy: Visuomotor Policy Learning via Action Diffusion": era5_genai_explosion/2023_diffusion_policy.md
       - "2023 · GPT-4 Technical Report - 闭源时代的能力跃迁与黑箱技术报告": era5_genai_explosion/2023_gpt4.md
       - "2023 · LLaMA — 用更小参数与更多 token 让开源 LLM 第一次追平 GPT-3": era5_genai_explosion/2023_llama.md
       - "2023 · LLaVA - 把 GPT-4 生成的视觉指令变成开源多模态助手": era5_genai_explosion/2023_llava.md
@@ -130,13 +143,16 @@ nav:
       - "2023 · Tree of Thoughts — 让大语言模型从一次性作答走向搜索式思考": era5_genai_explosion/2023_tot.md
       - "2023 · vLLM / PagedAttention — 把 LLM 服务的瓶颈从显存碎片里救出来": era5_genai_explosion/2023_vllm.md
   - "基础模型 (2020-2022)":
+      - era4_foundation_models/index.md
       - "2023 · ControlNet — 用零卷积把可控空间条件接入冻结的扩散模型": era4_foundation_models/2022_controlnet.md
       - "2022 · Chinchilla — 用最优算力分配证明当时所有 LLM 都「训练不足」": era4_foundation_models/2022_chinchilla.md
       - "2022 · Classifier-Free Diffusion Guidance — 一行代码砍掉外挂分类器，统一所有现代文生图": era4_foundation_models/2022_cfg.md
       - "2022 · CoT — 用一句「让我们一步步思考」解锁 LLM 的推理能力": era4_foundation_models/2022_cot.md
       - "2022 · Constitutional AI — 用一份「宪法」+ AI 反馈替换数万人类有害样本标签": era4_foundation_models/2022_constitutional_ai.md
+      - "2022 · DiT - 当扩散模型把 U-Net 换成 Transformer": era4_foundation_models/2022_dit.md
       - "2022 · DreamBooth — 用 3-5 张照片把任意主体「植入」文生图模型": era4_foundation_models/2022_dreambooth.md
       - "2022 · Flamingo: a Visual Language Model for Few-Shot Learning": era4_foundation_models/2022_flamingo.md
+      - "2022 · FlashAttention：不减少一次注意力计算，为什么反而更快": era4_foundation_models/2022_flashattention.md
       - "2022 · Imagen — 用大语言模型理解提示词的级联扩散文生图": era4_foundation_models/2022_imagen.md
       - "2022 · InstructGPT — 用 RLHF 把 GPT-3 从续写器训练成听话的助手": era4_foundation_models/2022_instructgpt.md
       - "2022 · MAE — 用 75% 掩码遮蔽让 ViT 学会自监督预训练": era4_foundation_models/2022_mae.md
@@ -155,12 +171,14 @@ nav:
       - "2020 · GPT-3 — 当语言模型大到 175B，prompting 成为新的编程范式": era4_foundation_models/2020_gpt3.md
       - "2020 · MoCo：用队列和动量编码器，把视觉自监督从 pretext task 带向通用表示学习": era4_foundation_models/2020_moco.md
       - "2020 · NeRF — 用一个 MLP 把场景编码成可微分的辐射场": era4_foundation_models/2020_nerf.md
+      - "2020 · RAG — 把维基百科变成生成模型的可替换记忆": era4_foundation_models/2020_rag.md
       - "2020 · Scaling Laws — 用幂律刻画 LLM 的损失、参数与算力之间的关系": era4_foundation_models/2020_scaling_laws.md
       - "2020 · Score SDE — 用随机微分方程统一扩散与 score-based 生成": era4_foundation_models/2020_score_sde.md
       - "2020 · SimCLR — 一个朴素的对比损失，把自监督视觉学习推上 ImageNet 线性评测的王座": era4_foundation_models/2020_simclr.md
       - "2020 · ViT — 用纯 Transformer 把卷积赶下视觉王座": era4_foundation_models/2020_vit.md
       - "2020 · wav2vec 2.0 - 让语音识别先听 5.3 万小时、再看 10 分钟标注": era4_foundation_models/2020_wav2vec2.md
   - "注意力机制 (2017-2019)":
+      - era3_attention/index.md
       - "2019 · EfficientNet — 用 compound scaling 重新定义 CNN 模型效率": era3_attention/2019_efficientnet.md
       - "2019 · GPT-2 — 用规模与零样本宣告 LLM 时代的到来": era3_attention/2019_gpt2.md
       - "2019 · RoBERTa — 把 BERT 重新训对的工程清醒剂": era3_attention/2019_roberta.md
@@ -182,6 +200,7 @@ nav:
       - "2017 · PointNet — 用置换不变深度网络直接处理无序点云": era3_attention/2017_pointnet.md
       - "2017 · Transformer — 用注意力埋葬循环神经网络": era3_attention/2017_transformer.md
   - "深度学习复兴 (2012-2016)":
+      - era2_deep_renaissance/index.md
       - "2016 · AlphaGo — 用蒙特卡洛树搜索 + 深度网络打败人类围棋世界冠军": era2_deep_renaissance/2016_alphago.md
       - "2016 · LayerNorm: 把归一化从 batch 搬到样本内部": era2_deep_renaissance/2016_layer_norm.md
       - "2016 · YOLO — 把目标检测改写成一次前向的实时回归": era2_deep_renaissance/2016_yolo.md
@@ -207,12 +226,13 @@ nav:
       - "2012 · AlexNet — 用 GPU + ReLU + Dropout 在 ImageNet 上把 Top-5 误差砍掉一半": era2_deep_renaissance/2012_alexnet.md
       - "2012 · Dropout — 随机关闭神经元，阻止特征探测器合谋": era2_deep_renaissance/2012_dropout.md
   - "神经网络萌芽 (1957-2011)":
+      - era1_foundations/index.md
       - "2011 · ReLU — 一个 max(0, x) 如何把深度网络从「实验室玩具」变成「工业基石」": era1_foundations/2011_relu.md
       - "2010 · Glorot Init — 让深度网络先把信号传过去": era1_foundations/2010_glorot_init.md
       - "2009 · ImageNet — 用 1500 万张图把「数据集」变成深度学习革命的引信": era1_foundations/2009_imagenet.md
       - "2008 · t-SNE — 高维数据可视化的视觉语言": era1_foundations/2008_tsne.md
-      - "2006 · DBN — 用逐层贪婪预训练让深层神经网络第一次「被训得动」": era1_foundations/2006_dbn.md
       - "2006 · Autoencoder — 用 RBM 预训练把神经网络从冷宫里唤醒": era1_foundations/2006_autoencoder.md
+      - "2006 · DBN — 用逐层贪婪预训练让深层神经网络第一次「被训得动」": era1_foundations/2006_dbn.md
       - "2003 · LDA — 用 Dirichlet 先验把 pLSA 升级成可推广的全贝叶斯主题模型": era1_foundations/2003_lda.md
       - "2001 · Random Forests — 用 bagging + 特征采样把决策树推上当年 ML 的王座": era1_foundations/2001_random_forests.md
       - "1998 · LeNet — 把卷积、池化与反向传播缝合成第一个工业级深度网络": era1_foundations/1998_lenet.md

@@ -1,0 +1,16 @@
+graph LR
+    A[Mask R-CNN 2017<br/>prompt-like object selection] --> B[DETR 2020<br/>query + cross-attention]
+    A --> C[MaskFormer 2021<br/>unified mask prediction]
+    D[CLIP 2021<br/>foundation-model prompt paradigm] --> E[SAM 2023<br/>image promptable segmentation]
+    B --> E
+    C --> E
+    F[MAE 2022<br/>high-res ViT pretraining] --> E
+    G[SA-1B data engine<br/>11M images / 1.1B masks] --> E
+    E --> H[Track Anything / SAM+tracker 2023<br/>useful but stitched]
+    E --> I[Grounded-SAM / HQ-SAM / MobileSAM 2023<br/>text / quality / efficiency]
+    H --> J[SAM 2 2024<br/>unified image+video PVS]
+    E --> J
+    K[SA-V data engine<br/>50.9K videos / 642.6K masklets] --> J
+    J --> L[streaming memory<br/>memory attention + bank + encoder]
+    J --> M[occlusion-aware propagation<br/>object pointers + occlusion head]
+    J --> N[real-time video editing / robotics / AR]

@@ -1,10 +1,10 @@
 ---
-title: "Claude 3.5/3.7 Sonnet System Card"
+title: "Claude 3.5/3.7 Sonnet - Turning Frontier Models into Controllable Engineering Collaborators"
 year: 2025
 authors: ["Anthropic"]
 affiliation: "Anthropic"
 conference: "Anthropic system card, model card addenda, and release notes (2024-2025)"
-citations_2605: 0
+citations_2609: 0
 era: "era5_genai_explosion"
 status: "v1"
 language: "en"
@@ -19,7 +19,7 @@ zh_version: "/era5_genai_explosion/2025_claude_sonnet/"
 
 ## TL;DR
 
-Anthropic's 2024-2025 Claude 3.5/3.7 Sonnet system-card sequence changed what a frontier-model “paper” can look like: less a reproducible algorithm report than a deployment artifact combining capability, interface, tools, evaluations, and safety thresholds. The public abstraction can be written as $p(y\mid x,B)=\sum_z p_\theta(y\mid x,z,B)p_\theta(z\mid x,B)$, where $B$ is a user/API-controlled thinking budget and $z$ is the intermediate reasoning trace that Claude 3.7 can show in extended thinking. That formula is an interpretation, not Anthropic's disclosed training recipe. The failed baseline it displaced was not a single model, but the 2024 default of fast chat models plus prompt-elicited chain-of-thought plus external agent scaffolds. The June 2024 Claude 3.5 Sonnet release made the Sonnet tier a practical frontier model with a 200K context window, $3/$15 per million tokens pricing, and 64% on Anthropic's internal agentic coding evaluation versus Claude 3 Opus at 38%. The October 2024 update pushed SWE-bench Verified from 33.4% to 49.0% and introduced public-beta computer use. Claude 3.7 Sonnet then made the same model both a normal LLM and a reasoning model: Anthropic reports 63.7% on its n=489 SWE-bench Verified subset without high-compute scaffolding, 70.3% with parallel/high-compute ranking, prompt-injection prevention rising from 74% to 88%, 45% fewer unnecessary refusals, and an ASL-2 system-card assessment. Compared with [OpenAI o1](https://openai.com/index/openai-o1-system-card/), Sonnet's public idea is visible, controllable, unified reasoning; compared with [DeepSeek-R1](2025_deepseek_r1.md), it is less an open training recipe and more a governed product interface for a model that can work inside enterprise codebases.
+Anthropic's 2024-2025 Claude 3.5/3.7 Sonnet system-card sequence changed what a frontier-model “paper” can look like: less a reproducible algorithm report than a deployment artifact combining capability, interface, tools, evaluations, and safety thresholds. The public abstraction can be written as $p(y\mid x,B)=\sum_z p_\theta(y\mid x,z,B)p_\theta(z\mid x,B)$, where $B$ is a user/API-controlled thinking budget and $z$ is the intermediate reasoning trace that Claude 3.7 can show in extended thinking. That formula is an interpretation, not Anthropic's disclosed training recipe. The failed baseline it displaced was not a single model, but the 2024 default of fast chat models plus prompt-elicited chain-of-thought plus external agent scaffolds. The June 2024 Claude 3.5 Sonnet release made the Sonnet tier a practical frontier model with a 200K context window, $3/$15 per million tokens pricing, and 64% on Anthropic's internal agentic coding evaluation versus Claude 3 Opus at 38%. The October 2024 update pushed SWE-bench Verified from 33.4% to 49.0% and introduced public-beta computer use. Claude 3.7 Sonnet then made the same model both a normal LLM and a reasoning model: Anthropic reports 63.7% on its n=489 SWE-bench Verified subset without high-compute scaffolding, 70.3% with parallel/high-compute ranking, prompt-injection prevention rising from 74% to 88%, 45% fewer unnecessary refusals, and an ASL-2 system-card assessment. Compared with [OpenAI o1](https://openai.com/index/openai-o1-system-card/), Sonnet's public idea is visible, controllable, unified reasoning; compared with [DeepSeek-R1](../2025_deepseek_r1/), it is less an open training recipe and more a governed product interface for a model that can work inside enterprise codebases.
 
 ---
 
@@ -352,8 +352,8 @@ For safety teams, the lesson is to treat prompt injection as a foundational thre
 ### Further reading
 
 - [OpenAI o1 System Card](https://openai.com/index/openai-o1-system-card/): contrast with another system-card style for hidden reasoning and test-time compute.
-- [DeepSeek-R1](2025_deepseek_r1.md): contrast open reasoning-RL recipe with closed productized system-card disclosure.
-- [Llama 3](2024_llama3.md): contrast how open-weight frontier models disclose training and evaluation through reports.
+- [DeepSeek-R1](../2025_deepseek_r1/): contrast open reasoning-RL recipe with closed productized system-card disclosure.
+- [Llama 3](../2024_llama3/): contrast how open-weight frontier models disclose training and evaluation through reports.
 - [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol): context for Claude's tool ecosystem and standardized agent context.
 - [SWE-bench Verified](https://www.swebench.com/#verified): benchmark context for Sonnet's coding-task evaluation and comparison limits.
 
