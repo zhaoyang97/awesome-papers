@@ -7,7 +7,7 @@ hide:
 # Awesome AI Papers
 
 <p style="font-size: 1.1em; color: var(--md-default-fg-color--light);">
-  AI 史上的经典论文，每一篇都值得一本传记 — 讲清背景、失败、传承与今日视角
+  深读塑造 AI 过去与未来的重要工作——讲清背景、突破、传承与当代意义。
 </p>
 
 > 共 **131** 篇，按时代 + 年份倒序排列
