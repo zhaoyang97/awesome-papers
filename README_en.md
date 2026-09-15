@@ -11,7 +11,7 @@
 - 🇬🇧 English site: <https://awesome.papernotes.org/en/>
 - 🇨🇳 Chinese site: <https://awesome.papernotes.org/>
 
-**Progress**: **129** deep notes so far, covering 5 eras (1958 → 2026).
+**Progress**: **131** deep notes so far, covering 5 eras (1958 → 2026).
 
 | Era | Time range | Representative works | Notes |
 |------|----------|----------|--------|
@@ -19,7 +19,7 @@
 | Era 2 · Deep Renaissance | 2012-2016 | AlexNet / Word2Vec / GAN / Attention / ResNet / AlphaGo | 24 |
 | Era 3 · Attention Era | 2017-2019 | Transformer / AlphaZero / BERT / GPT / PPO / Mask R-CNN | 20 |
 | Era 4 · Foundation Models | 2020-2022 | GPT-3 / DDPM / ViT / CLIP / AlphaFold2 / Stable Diffusion / CoT | 33 |
-| Era 5 · Large Model Era | 2023-present | LLaMA / SAM / DPO / Mamba / Sora / o1 / DeepSeek-R1 | 38 |
+| Era 5 · Large Model Era | 2023-present | LLaMA / SAM / DPO / Mamba / Sora / o1 / DeepSeek-R1 | 40 |
 
 ---
 
@@ -46,7 +46,9 @@ Every deep note must contain:
 
 ### 5 · Large Model Era (2023-present)
 
+- **2026** · [Claude Fable 5 / Mythos 5: When Safeguards Split One Model into Two Products](docs_en/era5_genai_explosion/2026_claude_fable5.md)
 - **2026** · [DeepSeek-V4: Making Million-Token Context an Architectural Problem](docs_en/era5_genai_explosion/2026_deepseek_v4.md)
+- **2026** · [GLM-5: From Vibe Coding to Sustained Agentic Engineering](docs_en/era5_genai_explosion/2026_glm5.md)
 - **2026** · [GPT-6 Astra: When a Highly Autonomous Agent Crossed the Critical Cyber Threshold](docs_en/era5_genai_explosion/2026_gpt6_astra.md)
 - **2025** · [Claude 3.5/3.7 Sonnet - Turning Frontier Models into Controllable Engineering Collaborators](docs_en/era5_genai_explosion/2025_claude_sonnet.md)
 - **2025** · [DeepSeek-R1 — How Pure Reinforcement Learning Taught an Open LLM to Reason](docs_en/era5_genai_explosion/2025_deepseek_r1.md)
@@ -216,7 +218,7 @@ awesome-papers/
 │   │   ├── 2020_gpt3.md                       #   GPT-3 — at 175B, prompting becomes the new programming paradigm
 │   │   ├── 2021_clip.md                       #   CLIP — 400M image–text pairs teach vision models to read language
 │   │   └── ...                                #   (DDPM / ViT / AlphaFold2 / Stable Diffusion / CoT ...)
-│   ├── era5_genai_explosion/           # 38 notes — 2023-present Large Model Era
+│   ├── era5_genai_explosion/           # 40 notes — 2023-present Large Model Era
 │   │   ├── 2023_llama.md                      #   LLaMA — smaller params + more tokens let open-source LLMs match GPT-3
 │   │   ├── 2025_deepseek_r1.md                #   DeepSeek-R1 — pure RL teaches an open-source LLM to reason
 │   │   └── ...                                #   (SAM / DPO / Mamba / Sora / o1 / Claude / Qwen3 ...)

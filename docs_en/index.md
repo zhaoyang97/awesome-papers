@@ -10,11 +10,13 @@ hide:
   Every landmark paper in AI history deserves a biography — its context, failures, legacy, and modern perspective.
 </p>
 
-> **129** notes total, grouped by era then sorted by year (newest first)
+> **131** notes total, grouped by era then sorted by year (newest first)
 
-## Era 5 · Large Model Era (2023-present) <small>38 notes</small>
+## Era 5 · Large Model Era (2023-present) <small>40 notes</small>
 
+- **2026** · [Claude Fable 5 / Mythos 5: When Safeguards Split One Model into Two Products](era5_genai_explosion/2026_claude_fable5.md)
 - **2026** · [DeepSeek-V4: Making Million-Token Context an Architectural Problem](era5_genai_explosion/2026_deepseek_v4.md)
+- **2026** · [GLM-5: From Vibe Coding to Sustained Agentic Engineering](era5_genai_explosion/2026_glm5.md)
 - **2026** · [GPT-6 Astra: When a Highly Autonomous Agent Crossed the Critical Cyber Threshold](era5_genai_explosion/2026_gpt6_astra.md)
 - **2025** · [Claude 3.5/3.7 Sonnet - Turning Frontier Models into Controllable Engineering Collaborators](era5_genai_explosion/2025_claude_sonnet.md)
 - **2025** · [DeepSeek-R1 — How Pure Reinforcement Learning Taught an Open LLM to Reason](era5_genai_explosion/2025_deepseek_r1.md)

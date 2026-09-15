@@ -11,7 +11,7 @@
 - 🇨🇳 中文站：<https://awesome.papernotes.org/>
 - 🇬🇧 English site: <https://awesome.papernotes.org/en/>
 
-**进度**：当前 **129** 篇深度笔记，覆盖 5 个时代（1958 → 2026）。
+**进度**：当前 **131** 篇深度笔记，覆盖 5 个时代（1958 → 2026）。
 
 | 时代 | 时间范围 | 主题代表 | 收录数 |
 |------|----------|----------|--------|
@@ -19,7 +19,7 @@
 | Era 2 · 深度学习复兴 | 2012-2016 | AlexNet / Word2Vec / GAN / Attention / ResNet / AlphaGo | 24 |
 | Era 3 · 注意力机制 | 2017-2019 | Transformer / AlphaZero / BERT / GPT / PPO / Mask R-CNN | 20 |
 | Era 4 · 基础模型 | 2020-2022 | GPT-3 / DDPM / ViT / CLIP / AlphaFold2 / Stable Diffusion / CoT | 33 |
-| Era 5 · 大模型时代 | 2023-present | LLaMA / SAM / DPO / Mamba / Sora / o1 / DeepSeek-R1 | 38 |
+| Era 5 · 大模型时代 | 2023-present | LLaMA / SAM / DPO / Mamba / Sora / o1 / DeepSeek-R1 | 40 |
 
 ---
 
@@ -46,7 +46,9 @@
 
 ### 5 · 大模型时代 (2023-present)
 
+- **2026** · [Claude Fable 5 / Mythos 5：当同一个模型因 safeguards 被分成两种产品](docs_zh/era5_genai_explosion/2026_claude_fable5.md)
 - **2026** · [DeepSeek-V4：把百万 token 上下文从额度变成架构问题](docs_zh/era5_genai_explosion/2026_deepseek_v4.md)
+- **2026** · [GLM-5：从 Vibe Coding 到可持续迭代的 Agentic Engineering](docs_zh/era5_genai_explosion/2026_glm5.md)
 - **2026** · [GPT-6 Astra：当高自主 Agent 首次跨过 Critical Cyber 门槛](docs_zh/era5_genai_explosion/2026_gpt6_astra.md)
 - **2025** · [Claude 3.5/3.7 Sonnet - 把前沿模型做成可控的工程同事](docs_zh/era5_genai_explosion/2025_claude_sonnet.md)
 - **2025** · [DeepSeek-R1 — 纯强化学习如何让开源 LLM 学会推理](docs_zh/era5_genai_explosion/2025_deepseek_r1.md)
@@ -216,7 +218,7 @@ awesome-papers/
 │   │   ├── 2020_gpt3.md                       #   GPT-3 — 175B 让 prompting 成为新的编程范式
 │   │   ├── 2021_clip.md                       #   CLIP — 4 亿对图文对比让视觉模型听懂自然语言
 │   │   └── ...                                #   (DDPM / ViT / AlphaFold2 / Stable Diffusion / CoT ...)
-│   ├── era5_genai_explosion/           # 38 notes — 2023-present 大模型时代
+│   ├── era5_genai_explosion/           # 40 notes — 2023-present 大模型时代
 │   │   ├── 2023_llama.md                      #   LLaMA — 用更小参数 + 更多 token 让开源 LLM 第一次追平 GPT-3
 │   │   ├── 2025_deepseek_r1.md                #   DeepSeek-R1 — 纯强化学习如何让开源 LLM 学会推理
 │   │   └── ...                                #   (SAM / DPO / Mamba / Sora / o1 / Claude / Qwen3 ...)

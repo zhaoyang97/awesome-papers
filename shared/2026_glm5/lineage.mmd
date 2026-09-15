@@ -1,0 +1,15 @@
+graph LR
+  DV2[DeepSeek-V2 2024<br/>MLA and MoE] -.architecture.-> GLM5
+  DV3[DeepSeek-V3 2024<br/>MTP and scaling] -.training.-> GLM5
+  DSA[DeepSeek-V3.2 2025<br/>DSA indexer] -.attention.-> GLM5
+  G45[GLM-4.5 2025<br/>ARC model] -.predecessor.-> GLM5
+  GRPO[GRPO 2024<br/>group-relative RL] -.algorithm.-> GLM5
+  SLIME[slime 2025<br/>async RL dataflow] -.system.-> GLM5
+  GLM5[GLM-5 2026<br/>744B-A40B agentic engineering]
+  GLM5 --> G51[GLM-5.1 2026<br/>productive long horizon]
+  GLM5 --> IDX[IndexShare 2026<br/>shared DSA indexer]
+  IDX --> G52[GLM-5.2 2026<br/>solid 1M context]
+  G52 --> G53[GLM-5.3 2026<br/>post-training only]
+  G52 --> F53[GLM-5.3-Flash 2026<br/>new 320B-A18B base]
+  SLIME --> G53
+  G53 --> CYBER[Cyber environments 2026<br/>exploitation chains]

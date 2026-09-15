@@ -2,9 +2,11 @@
 
 > 从 LLaMA 开源、SAM 重构视觉、o1 引爆"思考时代"，到 DeepSeek-R1 把推理能力开源化 —— 3 年内 AI 从"会聊天"变成"会推理"。
 
-## 收录笔记（38 篇）
+## 收录笔记（40 篇）
 
+- [Claude Fable 5 / Mythos 5：当同一个模型因 safeguards 被分成两种产品](2026_claude_fable5.md) · 2026 · Anthropic
 - [DeepSeek-V4：把百万 token 上下文从额度变成架构问题](2026_deepseek_v4.md) · 2026 · DeepSeek-AI
+- [GLM-5：从 Vibe Coding 到可持续迭代的 Agentic Engineering](2026_glm5.md) · 2026 · GLM-5 Team
 - [GPT-6 Astra：当高自主 Agent 首次跨过 Critical Cyber 门槛](2026_gpt6_astra.md) · 2026 · OpenAI
 - [Claude 3.5/3.7 Sonnet - 把前沿模型做成可控的工程同事](2025_claude_sonnet.md) · 2025 · Anthropic
 - [DeepSeek-R1 — 纯强化学习如何让开源 LLM 学会推理](2025_deepseek_r1.md) · 2025 · DeepSeek-AI

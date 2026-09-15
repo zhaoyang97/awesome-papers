@@ -10,11 +10,13 @@ hide:
   AI 史上的经典论文，每一篇都值得一本传记 — 讲清背景、失败、传承与今日视角
 </p>
 
-> 共 **129** 篇，按时代 + 年份倒序排列
+> 共 **131** 篇，按时代 + 年份倒序排列
 
-## Era 5 · 大模型时代 (2023-present) <small>38 篇</small>
+## Era 5 · 大模型时代 (2023-present) <small>40 篇</small>
 
+- **2026** · [Claude Fable 5 / Mythos 5：当同一个模型因 safeguards 被分成两种产品](era5_genai_explosion/2026_claude_fable5.md)
 - **2026** · [DeepSeek-V4：把百万 token 上下文从额度变成架构问题](era5_genai_explosion/2026_deepseek_v4.md)
+- **2026** · [GLM-5：从 Vibe Coding 到可持续迭代的 Agentic Engineering](era5_genai_explosion/2026_glm5.md)
 - **2026** · [GPT-6 Astra：当高自主 Agent 首次跨过 Critical Cyber 门槛](era5_genai_explosion/2026_gpt6_astra.md)
 - **2025** · [Claude 3.5/3.7 Sonnet - 把前沿模型做成可控的工程同事](era5_genai_explosion/2025_claude_sonnet.md)
 - **2025** · [DeepSeek-R1 — 纯强化学习如何让开源 LLM 学会推理](era5_genai_explosion/2025_deepseek_r1.md)

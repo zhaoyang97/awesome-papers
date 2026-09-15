@@ -2,9 +2,11 @@
 
 > From LLaMA going open-source and SAM reshaping vision, to o1 igniting the "thinking era," and DeepSeek-R1 open-sourcing reasoning itself — in three years, AI went from "can chat" to "can reason."
 
-## Collected Notes (38)
+## Collected Notes (40)
 
+- [Claude Fable 5 / Mythos 5: When Safeguards Split One Model into Two Products](2026_claude_fable5.md) · 2026 · Anthropic
 - [DeepSeek-V4: Making Million-Token Context an Architectural Problem](2026_deepseek_v4.md) · 2026 · DeepSeek-AI
+- [GLM-5: From Vibe Coding to Sustained Agentic Engineering](2026_glm5.md) · 2026 · GLM-5 Team
 - [GPT-6 Astra: When a Highly Autonomous Agent Crossed the Critical Cyber Threshold](2026_gpt6_astra.md) · 2026 · OpenAI
 - [Claude 3.5/3.7 Sonnet - Turning Frontier Models into Controllable Engineering Collaborators](2025_claude_sonnet.md) · 2025 · Anthropic
 - [DeepSeek-R1 — How Pure Reinforcement Learning Taught an Open LLM to Reason](2025_deepseek_r1.md) · 2025 · DeepSeek-AI
