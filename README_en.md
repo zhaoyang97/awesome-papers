@@ -1,15 +1,13 @@
 # Awesome AI Papers
 
-> A **bilingual (Chinese + English)** deep-reading project that writes "biographies" for the 100 papers that truly changed AI history.
->
-> Distill-style depth × Wikipedia-style coverage × native-Chinese writing + native-English mirror × LLM-driven and scalable.
+A **bilingual (Chinese + English)** deep-reading project that writes "biographies" for the 100 papers that truly changed AI history.
 
 **English** | [中文](README.md)
 
 **Sites**:
 
-- 🇬🇧 English site: <https://awesome.papernotes.org/en/>
-- 🇨🇳 Chinese site: <https://awesome.papernotes.org/>
+- English site: <https://awesome.papernotes.org/en/>
+- Chinese site: <https://awesome.papernotes.org/>
 
 **Progress**: **131** deep notes so far, covering 5 eras (1958 → 2026).
 
@@ -23,28 +21,11 @@
 
 ---
 
-## The 8-section deep template
-
-Every deep note must contain:
-
-1. **Historical Context** — Why did this paper appear at that exact moment? What was the field stuck on?
-2. **Background and Motivation**
-3. **Method in Detail** — original equations + a modern reproduction in code + detailed comparison tables
-4. **Failed Baselines** — Which baselines lost at the time, and why? (Almost every other write-up skips this.)
-5. **Key Experimental Numbers**
-6. **Idea Lineage** — must include a Mermaid citation graph (predecessors → this paper → successors → misreadings)
-7. **Modern Perspective** — N years later, which assumptions no longer hold up?
-8. **Limitations / Related Work / Resources**
-
-> ⚠️ **No scoring of top-tier papers.** Being included in the Top 100 is itself the highest praise — the frontmatter intentionally has no `awesome_score` field.
-
----
-
-## All notes (grouped by era)
+## 📚 All notes (grouped by era)
 
 > Click any title on GitHub to read the corresponding English markdown. For the web version (TOC, Mermaid rendering, dark mode), visit <https://awesome.papernotes.org/en/>.
 
-### 5 · Large Model Era (2023-present)
+### 🚀 5 · Large Model Era (2023-present)
 
 - **2026** · [Claude Fable 5 / Mythos 5: When Safeguards Split One Model into Two Products](docs_en/era5_genai_explosion/2026_claude_fable5.md)
 - **2026** · [DeepSeek-V4: Making Million-Token Context an Architectural Problem](docs_en/era5_genai_explosion/2026_deepseek_v4.md)
@@ -87,7 +68,7 @@ Every deep note must contain:
 - **2023** · [Tree of Thoughts — Deliberate Search as a Reasoning Interface for LLMs](docs_en/era5_genai_explosion/2023_tot.md)
 - **2023** · [vLLM / PagedAttention — Rescuing LLM Serving from KV-Cache Fragmentation](docs_en/era5_genai_explosion/2023_vllm.md)
 
-### 4 · Foundation Models (2020-2022)
+### 🧱 4 · Foundation Models (2020-2022)
 
 - **2023** · [ControlNet — Plugging spatial control into frozen diffusion via zero-convolutions](docs_en/era4_foundation_models/2022_controlnet.md)
 - **2022** · [Chinchilla — Proving All LLMs Were 'Undertrained' via Compute-Optimal Allocation](docs_en/era4_foundation_models/2022_chinchilla.md)
@@ -123,7 +104,7 @@ Every deep note must contain:
 - **2020** · [ViT — Dethroning Convolution from Vision with Pure Transformer](docs_en/era4_foundation_models/2020_vit.md)
 - **2020** · [wav2vec 2.0 - Speech Recognition After 53k Hours of Listening and 10 Minutes of Labels](docs_en/era4_foundation_models/2020_wav2vec2.md)
 
-### 3 · Attention Era (2017-2019)
+### 🎯 3 · Attention Era (2017-2019)
 
 - **2019** · [EfficientNet — Redefining CNN Efficiency via Compound Scaling](docs_en/era3_attention/2019_efficientnet.md)
 - **2019** · [GPT-2 — Announcing the LLM Era with Scale and Zero-shot](docs_en/era3_attention/2019_gpt2.md)
@@ -146,7 +127,7 @@ Every deep note must contain:
 - **2017** · [PointNet — Permutation-Invariant Deep Networks for Unordered Point Clouds](docs_en/era3_attention/2017_pointnet.md)
 - **2017** · [Transformer — Burying Recurrence with Attention](docs_en/era3_attention/2017_transformer.md)
 
-### 2 · Deep Renaissance (2012-2016)
+### 🔥 2 · Deep Renaissance (2012-2016)
 
 - **2016** · [AlphaGo — Defeating the Human Go World Champion with MCTS + Deep Networks](docs_en/era2_deep_renaissance/2016_alphago.md)
 - **2016** · [LayerNorm: Normalization Without a Batch](docs_en/era2_deep_renaissance/2016_layer_norm.md)
@@ -173,7 +154,7 @@ Every deep note must contain:
 - **2012** · [AlexNet — Halving ImageNet Top-5 Error with GPU + ReLU + Dropout](docs_en/era2_deep_renaissance/2012_alexnet.md)
 - **2012** · [Dropout — Randomly Turning Neurons Off to Stop Feature Co-adaptation](docs_en/era2_deep_renaissance/2012_dropout.md)
 
-### 1 · Foundations (1957-2011)
+### 🧠 1 · Foundations (1957-2011)
 
 - **2011** · [ReLU — How max(0, x) Turned Deep Networks from "Lab Toy" to "Industrial Cornerstone"](docs_en/era1_foundations/2011_relu.md)
 - **2010** · [Glorot Init — Making Deep Networks Pass Signals Before They Learn](docs_en/era1_foundations/2010_glorot_init.md)
@@ -192,7 +173,7 @@ Every deep note must contain:
 
 ---
 
-## Repository layout
+## 📂 Repository layout
 
 ```
 awesome-papers/
@@ -228,6 +209,6 @@ awesome-papers/
 
 ---
 
-## License
+## 📜 License
 
 CC-BY-NC 4.0

@@ -1,15 +1,13 @@
 # Awesome AI Papers
 
-> 给 100 篇真正改变 AI 历史的经典论文写"传记"的**中英双语**深度解读项目。
->
-> Distill 风格的深度 × 维基百科的体系 × 中文母语写作 + 英文母语镜像 × LLM 驱动可规模化。
+深度解读 100 篇改变 AI 历史的经典论文。
 
 [English](README_en.md) | **中文**
 
 **站点**：
 
-- 🇨🇳 中文站：<https://awesome.papernotes.org/>
-- 🇬🇧 English site: <https://awesome.papernotes.org/en/>
+- 中文站：<https://awesome.papernotes.org/>
+- English site: <https://awesome.papernotes.org/en/>
 
 **进度**：当前 **131** 篇深度笔记，覆盖 5 个时代（1958 → 2026）。
 
@@ -23,28 +21,11 @@
 
 ---
 
-## 8-section 深度模板
-
-每篇 deep note 必须包含：
-
-1. **历史背景** — 为什么这篇 paper 在那个时间点出现？当时学界在卡什么？
-2. **研究背景与动机**
-3. **方法详解** — 含原始公式 + 现代复现代码 + 详细对比表
-4. **失败案例** — 当时哪些 baseline 输了？为什么？（绝大多数解读跳过这部分）
-5. **实验关键数据**
-6. **思想史脉络** — 必含 Mermaid 引用图（前世 → 本文 → 今生 → 误读）
-7. **当代视角** — 站在 N 年后回看，哪些假设站不住了？
-8. **局限 / 相关工作 / 资源链接**
-
-> ⚠️ **不给顶级论文打分**。能入选 Top 100 本身就是最大的肯定，frontmatter 不包含 awesome_score 字段。
-
----
-
-## 全部笔记（按时代分组）
+## 📚 全部笔记（按时代分组）
 
 > 在 GitHub 上点击篇目可直接查看对应中文 markdown；网页版（含目录、Mermaid 渲染、深色模式）请访问 <https://awesome.papernotes.org/>。
 
-### 5 · 大模型时代 (2023-present)
+### 🚀 5 · 大模型时代 (2023-present)
 
 - **2026** · [Claude Fable 5 / Mythos 5：当同一个模型因 safeguards 被分成两种产品](docs_zh/era5_genai_explosion/2026_claude_fable5.md)
 - **2026** · [DeepSeek-V4：把百万 token 上下文从额度变成架构问题](docs_zh/era5_genai_explosion/2026_deepseek_v4.md)
@@ -87,7 +68,7 @@
 - **2023** · [Tree of Thoughts — 让大语言模型从一次性作答走向搜索式思考](docs_zh/era5_genai_explosion/2023_tot.md)
 - **2023** · [vLLM / PagedAttention — 把 LLM 服务的瓶颈从显存碎片里救出来](docs_zh/era5_genai_explosion/2023_vllm.md)
 
-### 4 · 基础模型 (2020-2022)
+### 🧱 4 · 基础模型 (2020-2022)
 
 - **2023** · [ControlNet — 用零卷积把可控空间条件接入冻结的扩散模型](docs_zh/era4_foundation_models/2022_controlnet.md)
 - **2022** · [Chinchilla — 用最优算力分配证明当时所有 LLM 都「训练不足」](docs_zh/era4_foundation_models/2022_chinchilla.md)
@@ -123,7 +104,7 @@
 - **2020** · [ViT — 用纯 Transformer 把卷积赶下视觉王座](docs_zh/era4_foundation_models/2020_vit.md)
 - **2020** · [wav2vec 2.0 - 让语音识别先听 5.3 万小时、再看 10 分钟标注](docs_zh/era4_foundation_models/2020_wav2vec2.md)
 
-### 3 · 注意力机制 (2017-2019)
+### 🎯 3 · 注意力机制 (2017-2019)
 
 - **2019** · [EfficientNet — 用 compound scaling 重新定义 CNN 模型效率](docs_zh/era3_attention/2019_efficientnet.md)
 - **2019** · [GPT-2 — 用规模与零样本宣告 LLM 时代的到来](docs_zh/era3_attention/2019_gpt2.md)
@@ -146,7 +127,7 @@
 - **2017** · [PointNet — 用置换不变深度网络直接处理无序点云](docs_zh/era3_attention/2017_pointnet.md)
 - **2017** · [Transformer — 用注意力埋葬循环神经网络](docs_zh/era3_attention/2017_transformer.md)
 
-### 2 · 深度学习复兴 (2012-2016)
+### 🔥 2 · 深度学习复兴 (2012-2016)
 
 - **2016** · [AlphaGo — 用蒙特卡洛树搜索 + 深度网络打败人类围棋世界冠军](docs_zh/era2_deep_renaissance/2016_alphago.md)
 - **2016** · [LayerNorm: 把归一化从 batch 搬到样本内部](docs_zh/era2_deep_renaissance/2016_layer_norm.md)
@@ -173,7 +154,7 @@
 - **2012** · [AlexNet — 用 GPU + ReLU + Dropout 在 ImageNet 上把 Top-5 误差砍掉一半](docs_zh/era2_deep_renaissance/2012_alexnet.md)
 - **2012** · [Dropout — 随机关闭神经元，阻止特征探测器合谋](docs_zh/era2_deep_renaissance/2012_dropout.md)
 
-### 1 · 神经网络萌芽 (1957-2011)
+### 🧠 1 · 神经网络萌芽 (1957-2011)
 
 - **2011** · [ReLU — 一个 max(0, x) 如何把深度网络从「实验室玩具」变成「工业基石」](docs_zh/era1_foundations/2011_relu.md)
 - **2010** · [Glorot Init — 让深度网络先把信号传过去](docs_zh/era1_foundations/2010_glorot_init.md)
@@ -192,7 +173,7 @@
 
 ---
 
-## 仓库结构
+## 📂 仓库结构
 
 ```
 awesome-papers/
@@ -228,6 +209,6 @@ awesome-papers/
 
 ---
 
-## License
+## 📜 License
 
 CC-BY-NC 4.0
